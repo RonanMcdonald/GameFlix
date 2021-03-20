@@ -114,7 +114,6 @@ body {
 }
 
 body {
-  background-color: #141414;
   overflow-x: hidden;
 }
 
@@ -260,10 +259,22 @@ ul {
 }
 
 body {
-  background-image: url("/style/content/background/p1-bg.png");
+  background-color: #141414;
+}
+
+body::after {
+  content: "";
+  background-image: url(../content/background/p1-bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.20;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .body {
