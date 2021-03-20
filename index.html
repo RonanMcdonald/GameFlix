@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Gameflix</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navigation">
+            <div class="logo">
+                <img src="./style/content/logo/logo.svg" alt="">
+            </div>
+            <div class="action">
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li class="r-bg"><a href="signup.html">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="body">
+            <!-- CONTENT WRAPPER -->
+            <div class="middle">
+                <div class="section" id="s1">
+                    <!-- HEADER TEXT -->
+                    <div class="header">
+                        <h1>Find your next game</h1>
+                    </div>
+                    <!-- LEFT CONTENT - TEXT-->
+                    <div class="b-left">
+                        <div class="content">
+                            <p>Find Now</p>
+                            <p>Play Instantly</p>
+                        </div>
+                        <div class="button">
+                            <ul>
+                                <li><a href="" class="r-bg">Join Free</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- RIGHT CONTENT - IMAGES -->
+                    <div class="b-right">
+                        <div class="fg-image">
+                            <img src="./style/content/foreground/FG-1.png" alt="">
+                        </div>
+                        <div class="fg-image">
+                            <img src="./style/content/foreground/FG-2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id="s2">
+                    <!-- HEADER TEXT -->
+                    <div class="header">
+                        <h1>About us</h1>
+                    </div>
+
+                    <div class="content">
+                        <p>Game recommendation service inspired by netflix, using steam to provide a large database of games</p>
+                    </div>
+
+                    <ul class="bullet-points">
+                        <span><li>Personalistation</li></span>
+                        <span><li>Free Account</li></span>
+                        <span><li>Lots of Information</li></span>
+                    </ul>
+
+                    <div class="button">
+                        <ul>
+                            <li><a href="" class="r-bg">Join Free</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section" id="s3">
+                    <!-- HEADER TEXT -->
+                    <div class="header">
+                        <h1>Frequently Asked Questions</h1>
+                    </div>
+
+                    <div class="faq-wrapper">
+                        <div class="item">
+                            <!-- Title -->
+                            <div class="title">
+                                <p>What is Gameflix?</p>
+                                <span><img src="./style/content/icons/arrow.svg" alt=""></span>
+                            </div>
+                            <!-- Content -->
+                            <div class="content">
+                                <p>blah blah a</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <!-- Title -->
+                            <div class="title">
+                                <p>What is Gameflix?</p>
+                                <span><img src="./style/content/icons/arrow.svg" alt=""></span>
+                            </div>
+                            <!-- Content -->
+                            <div class="content">
+                                <p>blah blah f</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <!-- Title -->
+                            <div class="title">
+                                <p>What is Gameflix?</p>
+                                <span><img src="./style/content/icons/arrow.svg" alt=""></span>
+                            </div>
+                            <!-- Content -->
+                            <div class="content">
+                                <p>blah blah e</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id="s4">
+                    <div class="contact-form">
+                        <form action="">
+                            <div class="grid-container">
+                                <div class="name">
+                                    <input type="name" name="" id="">
+                                </div>
+                                <div class="email">
+                                    <input type="email" name="" id="">
+                                </div>
+                                <div class="message">
+                                    <textarea name="message" id=""></textarea>
+                                </div>
+                                <div class="button">
+                                    <input type="button" name="" id="" value="SEND MESSAGE">
+                                </div>
+                              </div>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <ul>
+                            <li><img src="/style/content/icons/envelope.png" alt="">Gameflix@hotmail.com</li>
+                            <li><img src="/style/content/icons/map.png" alt="">G42 7BP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="carosel-buttons">
+                <ul>
+                    <li><span class="cb-active" id="1"></span></li>
+                    <li><span id="2"></span></li>
+                    <li><span id="3"></span></li>
+                    <li><span id="4"></span></li>
+                </ul>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a>About</a></li>
+                    <li><a>FAQ</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Page carosel
+        $('.middle > div').hide();
+        $('.middle').children(":nth-child(4)").show()
+        $('.carosel-buttons ul li span').click(function() {
+            $(".carosel-buttons ul li span").removeClass("cb-active");
+            $(this).addClass("cb-active");
+
+            $('.middle > div').hide();
+            $('.middle > div').eq($(this).parent().index()).show();
+        })
+
+        // FAQ Functionality
+        $('.item > .content').hide();
+        $('.item').click(function () {  
+            console.log($('.content', this).text());
+
+            $('.content', this).slideToggle('fast', function () { 
+
+            })
+        })
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+

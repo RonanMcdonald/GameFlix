@@ -1,0 +1,217 @@
+// Typograhpy
+h1 {
+    font-size: 82px;
+    opacity: 90%;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+p {
+    font-size: 42px;
+    opacity: 80%;
+}
+
+li {
+    font-size: 1.6em;
+    opacity: 90%;
+}
+
+a {
+    color: white
+}
+
+// List Style
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("/style/content/background/p1-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// Body
+.body {
+    flex: 1;
+    display: flex;
+}
+
+// Middle
+.middle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto 0;
+    width: 100%;
+    min-height: 500px;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    
+    // Header
+    .header {
+        width: 100%;
+        height: fit-content;
+        
+    }
+
+    .content {
+        margin-top: 25px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .button {
+        width: 100%;
+        height: 100%;
+        ul {
+            padding-bottom: 25px;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+
+
+#s1 {
+    .b-left {
+        display: flex;
+        flex-direction: column;
+        margin-right: 140px;
+
+        .content {
+            line-height: 1.4;
+            margin: 0;
+            p {
+                margin-top: -8px;
+            }
+            p:nth-child(2) {
+                padding: 0;
+                margin: 0;
+                margin-top: -35px;
+            }
+        }
+    }
+
+    .b-right {
+        position: relative;
+        height: fit-content;
+        .fg-image {
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+        .fg-image:nth-child(2) {
+            position: absolute;
+            top: 0;
+            right: -120%;
+        }
+    }
+}
+
+#s2 {
+    overflow: hidden;
+    p {
+        max-width: 720px;
+        line-height: 1.2;
+    }
+    .bullet-points {
+        list-style: disc;
+        width: 100%;
+        margin-top: -25px;
+        font-size: 20px;
+        padding-left: 2.5px;
+        span {
+            display: inline-block;
+            padding: 0 15px 0 25px;
+        }
+    }
+}
+
+
+#s3 {
+    // Typography
+    .item {
+        p { padding: 0; margin: 0; }
+        .title p { font-size: 30px; }
+        .content p { font-size: 24px; }
+    }
+
+    // Padding
+    .item .title, .content {
+        padding: 7px 28px;
+    }
+
+    .faq-wrapper {
+        margin-top: 25px;
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        gap: 15px 15px;
+        grid-auto-rows: min-content
+    }
+
+    // Main
+    .item {
+        height: fit-content;
+        cursor: pointer;
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #2f2f2f;
+            span { padding-left: 25px; }
+        }
+
+        .content {
+            background-color: #1f1f1f;
+            margin: 0;
+        }
+    }
+}
+
+#s4 {
+    display: flex;
+    align-items: center;
+    .contact-form {
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas:
+              "name email . ."
+              "message message . ."
+              "button button . ."
+              ". . . .";
+            }
+        .name { grid-area: name; }
+        .email { grid-area: email; }
+        .message { grid-area: message; }
+        .button { grid-area: button; }
+
+        textarea {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        input[type=button] {
+            width: 100%;
+        }
+    }
+}
