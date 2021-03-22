@@ -1,0 +1,110 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500&display=swap');
+
+// Font Variables
+$font-1-bebas: 'Bebas Neue', cursive;
+$font-2-poppins: 'Poppins', sans-serif;
+$font-3-roboto: 'Roboto', sans-serif;
+
+html, body {
+    font-family: $font-1-bebas;
+    color: white;
+}
+
+
+// Sets the default text formatting & responsive sizes //----------------
+
+$font-size-base: 1rem;
+$font-size-sm: .875rem;
+
+$font-size-h1: 2.25rem;
+$font-size-h2: 2rem;
+$font-size-h3: $font-size-base;
+$font-size-ingress: 1.5rem;
+
+$line-height-base: 1.5;
+$baseline: $line-height-base * 1rem;
+
+html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: $font-size-base;
+    letter-spacing: 0.02rem;
+}
+
+body {
+    line-height: $line-height-base;
+}
+
+h1 {
+    font-size: $font-size-h1/1.25;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin: 0;
+    padding-bottom: 2rem;
+
+}
+
+h2 {
+    font-size: $font-size-h2;
+    line-height: 1.375;
+    margin: $baseline 0 .65rem 0;
+
+}
+
+h3 {
+    font-size: $font-size-h2;
+    line-height: 1.25;
+    margin: $baseline 0 $baseline 0;
+}
+
+h4 {
+    font-size: $font-size-base;
+    margin: $baseline 0 0;
+    font-weight: normal;
+}
+
+p {
+    margin: 0 0 $baseline;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    -ms-hyphenate-limit-lines: 1;
+    -webkit-hyphenate-limit-lines: 1;
+    -ms-hyphenate-limit-chars: 6 3 2;
+    hyphens: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+//medium style links
+p a {
+    background-image: linear-gradient(to bottom, transparent 50%, currentcolor 50%);
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    background-position: 0 0.95em;
+}
+
+aside,
+figcaption,
+footer {
+    font-size: $font-size-sm;
+}
+
+figcaption p{
+    max-width: 30em;
+}
+
+h1,
+h2 {
+    max-width: 9em;
+}
+
+.u-emphasis {
+    font-weight: bold;
+}

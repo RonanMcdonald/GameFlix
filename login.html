@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMEFLIX LOGIN PAGE</title>
+    <link rel="stylesheet" href="style/css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navigation">
+            <div class="logo">
+                <img src="./style/content/logo/Logo_no_shadow.svg" alt="">
+            </div>
+            <div class="action">
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li class="r-bg"><a href="signup.html">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <form class="box" action="login.html" method="post">
+            <div class="form-heading">
+                <h>LOGIN</h>
+            </div>
+            <label for="email"></label>
+            <input type="text" placeholder="EMAIL OR USERNAME" name="email" required>
+
+            <label for="psw"></label>
+            <input type="password" placeholder="PASSWORD" name="psw" required>
+
+            <button type="submit">LOGIN</button>
+            <label>
+            <input type="checkbox" checked="checked" name="remember"> REMEMBER ME
+            <span class="psw"> <a href="#">NEED HELP?</a></span>
+        </label>
+            <br>
+            <span class="su">NEW TO GAMEFLIX? <a href="signup.html">SIGN UP NOW?</a></span>
+
+        </form>
+</body>
+
+</html>

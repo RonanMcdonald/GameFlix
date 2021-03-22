@@ -1,0 +1,17 @@
+// Core files
+@import "core/mixins";
+@import "core/typography";
+@import "core/components";
+@import "core/layout";
+@import "core/base";
+
+// Navigation
+@import "includes/navigation";
+
+// Footer
+@import "includes/footer";
+
+// Pages
+@import "pages/phase-1"; // Index, About, FAQ, Contact
+@import "pages/phase-2"; // Login, Sign-up, Edit Profile
+@import "pages/phase-3"; // Dashboar
