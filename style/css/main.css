@@ -522,28 +522,4 @@ body::after {
 .contact-wrapper .contact-form input[type=button] {
   width: 100%;
 }
-
-.contact-wrapper .contact-form input:focus ~ .floating-label,
-.contact-wrapper .contact-form input:not(:focus):valid ~ .floating-label {
-  top: 8px;
-  bottom: 10px;
-  left: 20px;
-  font-size: 11px;
-  opacity: 1;
-}
-
-.contact-wrapper .contact-form .inputText {
-  font-size: 14px;
-  width: 200px;
-  height: 35px;
-}
-
-.contact-wrapper .contact-form .floating-label {
-  position: absolute;
-  pointer-events: none;
-  left: 20px;
-  top: 18px;
-  -webkit-transition: 0.2s ease all;
-  transition: 0.2s ease all;
-}
 /*# sourceMappingURL=main.css.map */
