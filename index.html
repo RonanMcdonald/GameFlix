@@ -10,7 +10,7 @@
     <title>Gameflix</title>
 </head>
 
-<body>
+<body class="phase-1">
     <div class="wrapper">
         <div class="navigation">
             <div class="logo">
@@ -21,6 +21,27 @@
                     <li><a href="login.html">Login</a></li>
                     <li class="r-bg"><a href="signup.html">Sign up</a></li>
                 </ul>
+            </div>
+            <div class="hamburger-wrapper">
+                <div id="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="mobile-navigation">
+                <div class="action">
+                    <ul>
+                        <li>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -62,13 +83,20 @@
                     </div>
 
                     <div class="content">
-                        <p>Game recommendation service inspired by netflix, using steam to provide a large database of games</p>
+                        <p>Game recommendation service inspired by netflix, using steam to provide a large database of
+                            games</p>
                     </div>
 
                     <ul class="bullet-points">
-                        <span><li>Personalistation</li></span>
-                        <span><li>Free Account</li></span>
-                        <span><li>Lots of Information</li></span>
+                        <span>
+                            <li>Personalistation</li>
+                        </span>
+                        <span>
+                            <li>Free Account</li>
+                        </span>
+                        <span>
+                            <li>Lots of Information</li>
+                        </span>
                     </ul>
 
                     <div class="button">
@@ -93,7 +121,8 @@
                             </div>
                             <!-- Content -->
                             <div class="content">
-                                <p>Gameflix is a game recommener app that will recommend its users games based on the games they have already played </p>
+                                <p>Gameflix is a game recommener app that will recommend its users games based on the
+                                    games they have already played </p>
                             </div>
                         </div>
 
@@ -105,7 +134,9 @@
                             </div>
                             <!-- Content -->
                             <div class="content">
-                                <p>No, you do not have to purchase a membership to create an account with Gameflix. You can just head to gameflix sign-up page enter your details and click on sign-up button.</p>
+                                <p>No, you do not have to purchase a membership to create an account with Gameflix. You
+                                    can just head to gameflix sign-up page enter your details and click on sign-up
+                                    button.</p>
                             </div>
                         </div>
 
@@ -117,7 +148,8 @@
                             </div>
                             <!-- Content -->
                             <div class="content">
-                                <p>If you have an account with Gameflix you can login with this account in up-to five devices.</p>
+                                <p>If you have an account with Gameflix you can login with this account in up-to five
+                                    devices.</p>
                             </div>
                         </div>
                         <div class="item">
@@ -128,7 +160,8 @@
                             </div>
                             <!-- Content -->
                             <div class="content">
-                                <p>If you have an idea that you want to share with us about Gameflix app, you can email us about it at gameflix@hotmail.com</p>
+                                <p>If you have an idea that you want to share with us about Gameflix app, you can email
+                                    us about it at gameflix@hotmail.com</p>
                             </div>
                         </div>
                         <div class="item">
@@ -139,18 +172,21 @@
                             </div>
                             <!-- Content -->
                             <div class="content">
-                                <p>If you are having trouble signing-in to your account. You can email our team with the detail of what the problem is at gameflix@hotmail.com</p>
+                                <p>If you are having trouble signing-in to your account. You can email our team with the
+                                    detail of what the problem is at gameflix@hotmail.com</p>
                             </div>
                         </div>
                         <div class="item">
                             <!-- Title -->
                             <div class="title">
                                 <p>Is there a mobile (android/ios) app of gameflix that I can download?</p>
-                                <span><img src="./style/content/icons/arrow.svg" alt=""></span>
+
                             </div>
                             <!-- Content -->
                             <div class="content">
-                                <p>We do not currently have any Mobile (Android/IOS) app. However you can open our gameflix web app in your phone by accessing any browser and typing in www.gameflix.com in the URL section</p>
+                                <p>We do not currently have any Mobile (Android/IOS) app. However you can open our
+                                    gameflix web app in your phone by accessing any browser and typing in
+                                    www.gameflix.com in the URL section</p>
                             </div>
                         </div>
                     </div>
@@ -158,13 +194,13 @@
 
                 <div class="section" id="s4">
                     <div class="header">
-                        <h1>About us</h1>
+                        <h1>Contact us</h1>
                     </div>
 
                     <div class="content">
                         <p>Get in touch, Email us today</p>
                     </div>
-                    
+
                     <div class="contact-wrapper">
                         <div class="contact-form">
                             <form action="">
@@ -181,7 +217,7 @@
                                     <div class="button">
                                         <input type="button" name="" id="" value="SEND MESSAGE">
                                     </div>
-                                  </div>
+                                </div>
                             </form>
                         </div>
                         <div class="contact-info">
@@ -218,7 +254,7 @@
         // Page carosel
         $('.middle > div').hide();
         $('.middle').children(":nth-child(4)").show()
-        $('.carosel-buttons ul li span').click(function() {
+        $('.carosel-buttons ul li span').click(function () {
             $(".carosel-buttons ul li span").removeClass("cb-active");
             $(this).addClass("cb-active");
 
@@ -228,10 +264,10 @@
 
         // FAQ Functionality
         $('.item > .content').hide();
-        $('.item').click(function () {  
+        $('.item').click(function () {
             console.log($('.content', this).text());
 
-            $('.content', this).slideToggle('fast', function () { 
+            $('.content', this).slideToggle('fast', function () {
 
             })
         })
@@ -239,10 +275,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-

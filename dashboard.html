@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Gameflix</title>
+</head>
+
+<body class="phase-3">
+    <div class="wrapper">
+        <div class="navigation">
+            <div class="logo">
+                <img src="./style/content/logo/Logo_no_shadow.svg" alt="">
+            </div>
+            <!-- Full navigation -->
+            <div class="action">
+                <ul>
+                    <li><a href="" class="active-link">Home</a></li>
+                    <li><a href="">Top Selling</a></li>
+                    <li><a href="">New Releases</a></li>
+                    <li><a href="">Featured</a></li>
+                    <li><a href="">Specials</a></li>
+                </ul>
+            </div>
+            <div class="account-wrapper">
+                <span class="tooltip">
+                    <a href="">Account</a>
+                    <a href="">Sign out</a>
+                </span>
+                <div class="avatar-icon">
+                    <img src="./style/content/icons/avatar.png" alt="">
+                </div>
+                <div class="drop-arrow">
+                    <span><img src="./style/content/icons/arrow.svg" alt=""></span>
+                </div>
+            </div>
+
+            <!-- Hamburger Icon -->
+            <div class="hamburger-wrapper">
+                <div id="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!-- Hamburger Menu -->
+            <div class="mobile-navigation">
+                <div class="action">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Top Selling</a></li>
+                        <li><a href="">New Releases</a></li>
+                        <li><a href="">Featured</a></li>
+                        <li><a href="">Specials</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-container">
+            <div class="header">
+                <p>Featured & Recommended</p>
+            </div>
+            <div class="top-wrapper">
+                <div class="main-content">
+                    <div class="main-image">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1172620/header.jpg?t=1613653891" alt="">
+                    </div>
+                </div>
+                <div class="progress-wrapper">
+                    <span id="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-container">
+            <div class="header">
+                <p>First person shooter</p>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1085660/header.jpg?t=1614104374" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg?t=1612812939" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/218620/header.jpg?t=1615989984" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/252490/header.jpg?t=1613032122" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1616455066" alt="">
+                </div>
+
+                <div class="item">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1229490/header.jpg?t=1614731717" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $('#hamburger-icon').click(function () {
+        $(this).toggleClass('open');
+        $(".mobile-navigation").toggleClass("active");
+    });
+
+    $(".account-wrapper").mouseenter(function () {
+        $(".drop-arrow").animateRotate(180, 100)
+        $(".tooltip").show()
+        $()
+    })
+
+    $(".account-wrapper").mouseleave(function () {
+        $(".tooltip").hide()
+        $(".drop-arrow").animateRotate(0)
+    });
+
+    $.fn.animateRotate = function (angle, duration, easing, complete) {
+        return this.each(function () {
+            var $elem = $(this);
+
+            $({ deg: 0 }).animate({ deg: angle }, {
+                duration: duration,
+                easing: easing,
+                step: function (now) {
+                    $elem.css({
+                        transform: 'rotate(' + now + 'deg)'
+                    });
+                },
+                complete: complete || $.noop
+            });
+        });
+    };
+
+
+</script>
+
+</html>

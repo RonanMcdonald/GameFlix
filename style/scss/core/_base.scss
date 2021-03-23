@@ -1,12 +1,31 @@
 $background-color: #141414;
-$main-color: #FF0000;
+$main-color: #ff0000;
 $hover-color: #141414;
 
 html,
 body {
-    margin: 0;
+  margin: 0;
 }
 
-body {
-    overflow-x: hidden;
+.phase-1,
+.phase-2,
+.phase-3 {
+  overflow-x: hidden;
+  background-color: $background-color;
+}
+
+.phase-1::after,
+.phase-2::after {
+  content: '';
+  background-image: url(../content/background/p1-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }

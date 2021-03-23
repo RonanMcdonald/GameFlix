@@ -1,0 +1,224 @@
+.phase-3 {
+  $wrapper_padding: 0 65px;
+
+  .wrapper {
+    max-width: 100% !important;
+    padding: 0;
+  }
+
+  // Fix navigation
+  .navigation {
+    padding: $wrapper_padding;
+    justify-content: left;
+    margin-top: 15px;
+    font-size: 12px;
+    font-family: $font-3-roboto;
+    max-height: 52px;
+    .logo {
+      $width: 115px;
+      min-width: $width;
+      width: $width;
+      padding-top: 4px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .account-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      max-width: 80px;
+      width: 80px;
+      min-height: 52px;
+      position: relative;
+      .avatar-icon {
+        margin-right: 10px;
+        position: absolute;
+        left: 0;
+      }
+
+      .drop-arrow {
+        position: absolute;
+        left: 55px;
+      }
+
+      &:hover .tooltip {
+        display: block;
+        cursor: pointer;
+      }
+
+      $tp-border-color: rgba(255, 255, 255, 0.25);
+      .tooltip {
+        display: none;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 1px solid $tp-border-color;
+        padding: 4px 0px;
+        left: -38.5px;
+        margin-top: 180px;
+        position: relative;
+        z-index: 1000;
+        font-size: 12px;
+      }
+
+      .tooltip::before {
+        content: '';
+        position: absolute;
+
+        $width: 16px;
+        $height: $width/1.2;
+        border-left: $height solid transparent;
+        border-right: $height solid transparent;
+        border-bottom: $width solid rgba(255, 255, 255, 0.75);
+
+        top: -$width;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .action {
+      margin-left: 0;
+      flex: 1;
+
+      ul {
+        margin-left: 38px;
+        li {
+          margin: 0px;
+        }
+        a {
+          padding: 4px 12px;
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      a:hover {
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      .active-link {
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+
+  // Main content
+
+  .header {
+    padding: $wrapper_padding;
+    font-size: 36px;
+
+    p {
+      margin: 0 !important;
+    }
+  }
+
+  .top-container {
+    padding: $wrapper_padding;
+    $bottom-margin: 8px;
+    $btn-width: 65px;
+
+    margin-bottom: calc(#{$bottom-margin} + 35px);
+
+    .header {
+      padding: 0;
+    }
+
+    .top-wrapper {
+      position: relative;
+      margin: 0 $btn-width;
+
+      .main-content {
+        background-color: #1f1f1f;
+        position: relative;
+        display: flex;
+        .main-image {
+          height: auto;
+          width: 600px;
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &::after,
+      &::before {
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100px;
+        width: $btn-width;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &::after {
+        content: url(/style/content/icons/large-arrow-left.svg);
+        background: linear-gradient(90deg, #141414 0%, #1f1f1f 100%);
+        left: -$btn-width;
+      }
+
+      &::before {
+        content: url(/style/content/icons/large-arrow-right.svg);
+        background: linear-gradient(-90deg, #141414 0%, #1f1f1f 100%);
+        right: -$btn-width;
+      }
+    }
+
+    .progress-wrapper {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: $bottom-margin;
+      span {
+        width: 20px;
+        height: 10px;
+        border-radius: 2px;
+        content: '';
+        margin: 0 5px;
+        background-color: rgba(255, 255, 255, 0.25);
+        bottom: -$bottom-margin;
+      }
+
+      #active {
+        background-color: rgba(255, 255, 255, 0.8) !important;
+      }
+    }
+  }
+
+  .row-container {
+    max-width: 100vw;
+    position: relative;
+
+    .row {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-left: 65px;
+      position: absolute;
+    }
+
+    .item {
+      $change: 150px;
+      $width: calc(460px - #{$change});
+      $height: auto;
+
+      width: $width;
+      height: $height;
+
+      border-radius: 3.5px;
+      overflow: hidden;
+      margin-right: 5px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

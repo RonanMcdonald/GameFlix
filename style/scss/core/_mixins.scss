@@ -1,20 +1,19 @@
 // Opacity
 @mixin opacity($opacity) {
-    opacity: $opacity;
-    filter: alpha(opacity=($opacity * 100));
+  opacity: $opacity;
+  filter: alpha(opacity=($opacity * 100));
 }
 
 // Vertical Align
 @mixin vertical-align {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 // Flexbox
-@mixin flexbox
-{
-    display:flex;
+@mixin flexbox {
+  display: flex;
 }

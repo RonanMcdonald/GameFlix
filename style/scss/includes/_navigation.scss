@@ -1,40 +1,122 @@
 .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 15px;
 
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }   
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-    li {
-        display: inline-block;
-        padding: 7px 22px;
-        font-size: 1.6em;
-        letter-spacing: 0.05rem;
+  li {
+    display: inline-block;
+  }
+
+  li:first-child {
+    margin-right: 20px;
+  }
+
+  a {
+    color: white;
+    display: block;
+    padding: 7px 22px;
+    font-size: 1.6em;
+    letter-spacing: 0.05rem;
+  }
+
+  a:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .logo {
+    width: 175px;
+    img {
+      width: 100%;
+      height: 100%;
     }
+  }
+}
+// Hamburger
 
-    li:first-child {
-        margin-right: 20px;
-    }
+.hamburger-wrapper,
+.mobile-navigation {
+  display: none;
+}
 
-    a {
-        color: white;
-    }
+#hamburger-icon {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
 
-    a:hover {
-        cursor: pointer;
-    }
+#hamburger-icon span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
 
-    .logo {
-        width: 175px;
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
+#hamburger-icon span:nth-child(1) {
+  top: 0px;
+}
+
+#hamburger-icon span:nth-child(2),
+#hamburger-icon span:nth-child(3) {
+  top: 18px;
+}
+
+#hamburger-icon span:nth-child(4) {
+  top: 36px;
+}
+
+#hamburger-icon.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#hamburger-icon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#hamburger-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#hamburger-icon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
