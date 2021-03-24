@@ -110,7 +110,7 @@ async function main() {
   return data;
 }
 
-// Check if property exists
+// Check if property exists test
 function check_exists(property) {
   if (typeof property == 'undefined') {
     return 'NULL';
