@@ -1,0 +1,10 @@
+{{#demo}}
+<div class="item-container">
+    <div class="item">
+        <img src="{{header_image}}" alt="">
+        <div class="content">
+            <p>{{name}}</p>
+        </div>
+    </div>
+</div>
+{{/demo}}

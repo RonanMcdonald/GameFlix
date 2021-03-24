@@ -11,6 +11,8 @@ router.get('/login', controller.renderPhase_2)
 // Phase 3 - Dashboard
 router.get('/dashboard', controller.renderPhase_3)
 
+router.get('/list')
+
 
 // --- Errors --- //
 // 404 - Page not found
