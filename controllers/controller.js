@@ -105,7 +105,7 @@ async function main() {
     data.push(obj);
   }
 
-  console.log(data);
+  console.debug(data);
   return data;
 }
 
