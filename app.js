@@ -1,10 +1,10 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-const bodyParser = require('body-parser');
-var connectLiveReload = require('connect-livereload');
+const express = require('express')
+const app = express()
+const path = require('path')
+const bodyParser = require('body-parser')
+var connectLiveReload = require('connect-livereload')
 
-var publicDirectory = __dirname + '/public';
+var publicDirectory = __dirname + '/public'
 
 // Front-End LiveReload.
 // var livereload = require("livereload")
@@ -16,31 +16,28 @@ var publicDirectory = __dirname + '/public';
 //     }, 10);
 // })
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }))
 
-const mustache = require('mustache-express');
-app.engine('mustache', mustache());
-app.set('view engine', 'mustache');
+const mustache = require('mustache-express')
+app.engine('mustache', mustache())
+app.set('view engine', 'mustache')
 
-app.set('views', __dirname + '/public/views');
-app.use(express.static(publicDirectory));
+app.set('views', __dirname + '/public/views')
+app.use(express.static(publicDirectory))
 
 // app.use(connectLiveReload())
 
 app.use(function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  );
-  res.setHeader('Content-Type', 'text/html');
-  next();
-});
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+  res.setHeader('Content-Type', 'text/html')
+  next()
+})
 
-const routes = require('./routes/route.js');
-app.use('/', routes);
+const routes = require('./routes/route.js')
+app.use('/', routes)
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080
 app.listen(PORT, function () {
   //console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
-});
+})
