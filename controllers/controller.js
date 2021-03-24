@@ -60,9 +60,6 @@ async function main() {
     var powObj = powObjInit[Object.keys(powObjInit)]['data'];
     var spyObj = await api_request(urls.steamSpy_url);
 
-    pc_rec_obj = get_game_req(powObj['pc_requirements']);
-    mac_rec_obj = get_game_req(powObj['mac_requirements']);
-
     var obj = {
       app_id: spyObj.appid,
       name: spyObj.name,
@@ -91,23 +88,37 @@ async function main() {
         url: powObj['support_info'].url,
         email: powObj['support_info'].email,
       },
-      requirements: {
-        pc_req: {
-          minimum: pc_rec_obj.minimum,
-          recommended: pc_rec_obj.recommended,
-        },
-        mac_req: {
-          minimum: mac_rec_obj.minimum,
-          recommended: mac_rec_obj.recommended,
-        },
-      },
+      // requirements: {
+      //   pc_req: {
+      //     minimum: get_game_req(powObj['pc_requirements'].minimum),
+      //     recommended: get_game_req(powObj['pc_requirements'].recommended),
+      //   },
+      //   mac_req: {
+      //     minimum: get_game_req(powObj['mac_requirements'].minimum),
+      //     recommended: get_game_req(powObj['mac_requirements'].recommended),
+      //   },
+      // },
     };
+
+    console.log(check_exists(powObj['mac_requirements'].minimum));
+    console.log(check_exists(powObj['mac_requirements'].recommended));
+
     data.push(obj);
   }
 
-  console.debug(data);
+  //console.debug(data);
   return data;
 }
+
+// Check if property exists
+function check_exists(property) {
+  if (typeof property == 'undefined') {
+    return 'NULL';
+  } else {
+    return property;
+  }
+}
+
 //test
 // Get game tags: Top 3 only
 function get_game_tags(obj) {
@@ -145,6 +156,14 @@ function get_game_req(obj) {
   return x;
 }
 
+function check_if_exists(obj) {
+  if (typeof obj == 'undefined') {
+    return false;
+  } else {
+    return obj;
+  }
+}
+
 function check_if_free(obj) {
   if (obj['is_free'] == true) {
     return (obj = {
@@ -157,14 +176,6 @@ function check_if_free(obj) {
       final: obj['price_overview'].final,
       discount_percent: obj['price_overview'].discount_percent,
     });
-  }
-}
-
-function check_if_exists(obj) {
-  if (typeof obj == 'undefined') {
-    return '';
-  } else {
-    return obj;
   }
 }
 
