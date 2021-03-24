@@ -1,4 +1,4 @@
-# FitTracker
+# GameFlix
 
 GameFlix is a game recomendation service using various Steam APIs
 
