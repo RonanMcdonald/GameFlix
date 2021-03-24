@@ -13,7 +13,7 @@ liveReloadServer.watch(publicDirectory)
 liveReloadServer.server.once("connection", () => {
     setTimeout(() => {
         liveReloadServer.refresh("/")
-    }, 100);
+    }, 10);
 })
 
 app.use(express.urlencoded({ extended: true }))
@@ -36,7 +36,6 @@ app.use(function(req, res, next) {
 
 const routes = require('./routes/route.js');
 app.use("/", routes);
-
 
 
 const PORT = process.env.PORT || 8080
