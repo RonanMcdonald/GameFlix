@@ -1,0 +1,30 @@
+{
+  "name": "gameflix",
+  "version": "1.0.0",
+  "description": "Game recommendation web application",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js -e ejs,js,css,html,jpg,png,scss,mustache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonanMcdonald/GameFlix.git"
+  },
+  "author": "Roann Mcdonald",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RonanMcdonald/GameFlix/issues"
+  },
+  "homepage": "https://github.com/RonanMcdonald/GameFlix#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-livereload": "^0.6.1",
+    "express": "^4.17.1",
+    "livereload": "^0.9.3",
+    "mustache-express": "^1.3.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
