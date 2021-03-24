@@ -1028,10 +1028,60 @@ select {
   position: absolute;
   content: '';
   width: 100%;
-  height: 100%;
+  height: 130%;
   background-color: #1f1f1f;
   top: 100%;
   margin-top: -8px;
+}
+
+.phase-3 .row-container .item .content .title {
+  font-size: 30px;
+  margin-left: 10px;
+  padding-left: 5px;
+}
+
+.phase-3 .row-container .item .content .review {
+  padding-left: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 7px;
+  background-color: #3a3a3a;
+  border-radius: 5px;
+  opacity: 0.6;
+}
+
+.phase-3 .row-container .item .content .review a {
+  color: #00D1FF;
+  text-decoration: none;
+}
+
+.phase-3 .row-container .item .content .genre {
+  margin-left: 10px;
+  margin-right: 2px;
+  background-color: #3a3a3a;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  opacity: 0.6;
+}
+
+.phase-3 .row-container .item .content .description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding-left: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.phase-3 .row-container .item .content .row-release {
+  padding-left: 5px;
+  margin-left: 10px;
+  opacity: 0.6;
+}
+
+.phase-3 .row-container .item .content .row-release a {
+  color: #00D1FF;
+  text-decoration: none;
 }
 
 .phase-3 .row-container .item:hover {
