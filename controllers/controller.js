@@ -108,7 +108,7 @@ async function main() {
   console.debug(data);
   return data;
 }
-
+//test
 // Get game tags: Top 3 only
 function get_game_tags(obj) {
   var arr = [];
