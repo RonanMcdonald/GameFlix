@@ -7,14 +7,15 @@ var connectLiveReload = require('connect-livereload')
 var publicDirectory = __dirname + '/public'
 
 // Front-End LiveReload.
-// var livereload = require("livereload")
-// var liveReloadServer = livereload.createServer()
-// liveReloadServer.watch(publicDirectory)
-// liveReloadServer.server.once("connection", () => {
-//     setTimeout(() => {
-//         liveReloadServer.refresh("/")
-//     }, 10);
-// })
+var livereload = require('livereload')
+var liveReloadServer = livereload.createServer()
+liveReloadServer.watch(publicDirectory)
+liveReloadServer.server.once('connection', () => {
+  setTimeout(() => {
+    liveReloadServer.refresh('/')
+  }, 15)
+})
+app.use(connectLiveReload())
 
 app.use(express.urlencoded({ extended: true }))
 
@@ -24,8 +25,6 @@ app.set('view engine', 'mustache')
 
 app.set('views', __dirname + '/public/views')
 app.use(express.static(publicDirectory))
-
-// app.use(connectLiveReload())
 
 app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')

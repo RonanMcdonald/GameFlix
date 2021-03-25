@@ -1,9 +1,14 @@
 .phase-3 {
   $wrapper_padding: 0 65px;
 
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
   .wrapper {
     max-width: 100% !important;
-    padding: 0;
+    padding: 0 0 200px 0;
   }
 
   // Fix navigation
@@ -192,10 +197,12 @@
     }
   }
 
+  // CARDS
+
   .row-container {
     max-width: 100vw;
     position: relative;
-
+    height: 240px;
     .row {
       display: flex;
       flex-wrap: nowrap;
@@ -217,69 +224,137 @@
 
     .item {
       position: absolute;
+
       img {
         width: 100%;
         height: 100%;
-        border-radius: 3.5px;
       }
 
+      // CONTENT
       .content {
-        position: absolute;
-        content: '';
+        display: none;
+        position: relative;
         width: 100%;
-        height: 130%;
-        background-color: #1f1f1f;
         top: 100%;
         margin-top: -8px;
-        .title {
-          font-size: 30px;
-          margin-left: 10px;
-          padding-left: 5px;
+        padding: 5px 10px 10px 10px;
+        background-color: #212121;
+        box-sizing: border-box;
+        // Typography
+        .title,
+        .short-description {
+          font-family: $font-3-roboto;
         }
+
+        .tag,
+        .review p,
+        .bottom-content {
+          font-size: 14px;
+          letter-spacing: 0.5px;
+        }
+
+        // Containers
+        .top-content {
+          display: flex;
+
+          .title {
+            flex: 1;
+
+            p {
+              font-size: 22px;
+              font-weight: 400;
+            }
+          }
+          .list-button {
+            input[type='button'] {
+              cursor: pointer;
+              font-family: $font-1-bebas;
+              font-size: 14px;
+              font-weight: 400;
+              letter-spacing: 0.8px;
+              background-color: $main-color;
+              border-radius: 5px;
+              outline: none;
+              border: transparent;
+              padding: 5px 10px 5px 10px;
+              height: 30px;
+              margin-top: 1.5px;
+            }
+          }
+        }
+
         .review {
-          padding-left: 5px;
-          margin-left: 10px;
-          margin-right: 10px;
-          margin-bottom: 7px;
-          background-color: #3a3a3a;
+          background-color: #373737;
+          padding: 3.5px 8px 1px 8px;
+          margin: 5px 0;
           border-radius: 5px;
-          opacity: 0.6;
+
+          p {
+            color: rgba(255, 255, 255, 0.75);
+          }
+
+          .text {
+            color: #00d1ff;
+          }
         }
-        .review a {
-          color: #00d1ff;
-          text-decoration: none;
+
+        .tag-container {
+          display: flex;
+          .tag {
+            background-color: #373737;
+            color: rgba(255, 255, 255, 0.75);
+            border-radius: 5px;
+            padding: 2px 8px 0px 8px;
+            margin-right: 5px;
+          }
         }
-        .genre {
-          margin-left: 10px;
-          margin-right: 2px;
-          background-color: #3a3a3a;
-          padding-left: 5px;
-          padding-right: 5px;
-          border-radius: 5px;
-          opacity: 0.6;
+
+        .short-description {
+          margin: 10px 0;
+          font-size: 14px;
+          line-height: 1.1;
         }
-        .description {
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 12px;
-          padding-left: 5px;
-          margin-left: 10px;
-          margin-top: 10px;
-        }
-        .row-release {
-          padding-left: 5px;
-          margin-left: 10px;
-          opacity: 0.6;
-        }
-        .row-release a {
-          color: #00d1ff;
-          text-decoration: none;
+
+        .bottom-content {
+          display: flex;
+          justify-content: space-between;
+
+          .release-date {
+            color: rgba(255, 255, 255, 0.5);
+            span {
+              color: #00d1ff;
+            }
+          }
+          .price {
+            color: rgba(255, 255, 255, 0.5);
+            span {
+              color: #00d1ff;
+            }
+          }
         }
       }
+
+      transition: transform 200ms ease-in-out;
 
       &:hover {
         z-index: 20;
-        transition: 200ms ease-out;
-        transform: scale(1.3) translateY(-75px);
+        transform: scale(1.2) translateY(-50px);
+      }
+
+      // Opacity causes visual issues
+      &:hover .content {
+        display: block;
+        animation: fadeIn 200ms;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
     }
   }

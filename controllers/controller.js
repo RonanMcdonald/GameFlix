@@ -12,6 +12,7 @@ exports.renderPhase_2 = (req, res) => {
 
 // Dashboard
 exports.renderPhase_3 = async function (req, res) {
+  //res.render('dashboard')
   await main().then((data) => {
     res.render('dashboard', {
       demo: data,
@@ -36,11 +37,11 @@ const api_request = (url) => {
   })
 }
 
-main()
+// main()
 async function main() {
   var categories = {
     fps: ['730'],
-    // fps: ['730', '440', '578080', '218620', '444090', '272060', '1172470', '1229490', '552520', '1085660', '359550', '252490', '550', '230410'],
+    //fps: ['730', '440', '578080', '218620', '444090', '272060', '1172470', '1229490', '552520', '1085660', '359550', '252490', '550', '230410'],
   }
 
   var data = []
@@ -147,7 +148,7 @@ function get_game_req(obj) {
 function check_if_free(obj) {
   if (obj['is_free'] == true) {
     return (obj = {
-      is_free: true,
+      is_free: 'Free',
     })
   } else {
     return {
