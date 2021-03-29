@@ -19,9 +19,3 @@ GameFlix is a game recomendation service using various Steam APIs
 ## Usage
 
 1. Goto `localhost:8080` in your browser
-
-## Credit
-
-- Contributers:
-- Ronan Mcdonald, Haris
-- Coursework: IP3
