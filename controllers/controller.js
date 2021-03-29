@@ -40,16 +40,15 @@ const api_request = (url) => {
 // main()
 async function main() {
   var categories = {
+    // fps: ['730', '440', '578080', '218620', '444090', '272060', '1172470', '1229490', '552520', '1085660', '359550', '252490', '550', '230410'],
     fps: ['730'],
-    //fps: ['730', '440', '578080', '218620', '444090', '272060', '1172470', '1229490', '552520', '1085660', '359550', '252490', '550', '230410'],
   }
 
   var data = []
 
   for (let i = 0; i < categories.fps.length; i++) {
     var urls = {
-      steamPowered_url:
-        'https://store.steampowered.com/api/appdetails?appids=' + categories.fps[i] + '&cc=gb&l=en&format=json',
+      steamPowered_url: 'https://store.steampowered.com/api/appdetails?appids=' + categories.fps[i] + '&cc=gb&l=en&format=json',
       steamSpy_url: 'https://steamspy.com/api.php?request=appdetails&appid=' + categories.fps[i],
     }
 
