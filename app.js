@@ -13,7 +13,7 @@ liveReloadServer.watch(publicDirectory)
 liveReloadServer.server.once('connection', () => {
   setTimeout(() => {
     liveReloadServer.refresh('/')
-  }, 15)
+  }, 8)
 })
 app.use(connectLiveReload())
 
@@ -36,7 +36,7 @@ app.use(function (req, res, next) {
 const routes = require('./routes/route.js')
 app.use('/', routes)
 
-const PORT = process.env.PORT || 8080
+const PORT = 8090
 app.listen(PORT, function () {
   //console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
 })

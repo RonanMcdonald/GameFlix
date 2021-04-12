@@ -320,6 +320,57 @@ body {
   cursor: pointer;
 }
 
+.phase-1 {
+  /*
+  #s4 {
+    .contact-wrapper {
+      display: flex;
+      .contact-form {
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          gap: 0px 0px;
+          grid-template-areas:
+            'name email . .'
+            'message message . .'
+            'button button . .'
+            '. . . .';
+        }
+        .name {
+          grid-area: name;
+        }
+        .email {
+          grid-area: email;
+        }
+        .message {
+          grid-area: message;
+        }
+        .button {
+          grid-area: button;
+        }
+
+        .input,
+        label {
+          display: block;
+        }
+
+        textarea {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+        }
+
+        input[type='button'] {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+*/
+}
+
 .phase-1 h1 {
   font-size: 82px;
   opacity: 90%;
@@ -547,6 +598,10 @@ body {
   margin: 0;
 }
 
+.phase-1 #s4 .content p {
+  font-size: 48px;
+}
+
 .phase-1 #s4 .contact-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -556,12 +611,12 @@ body {
 .phase-1 #s4 .contact-wrapper .contact-form .grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
-      grid-template-areas: 'name email . .' 'message message . .' 'button button . .' '. . . .';
+      grid-template-areas: 'name email . .' 'message message . .' 'button button . .' '. . . .';
 }
 
 .phase-1 #s4 .contact-wrapper .contact-form .name {
@@ -596,13 +651,63 @@ body {
 }
 
 .phase-1 #s4 .contact-wrapper .contact-form textarea {
-  width: 100%;
+  width: 610px;
+  height: 175px;
   padding: 0;
-  margin: 0;
+  float: left;
+  border: 10px solid #2f2f2f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #2f2f2f;
+  font-family: 'Bebas Neue', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: left;
+  margin-top: -4em;
+}
+
+.phase-1 #s4 .contact-wrapper .contact-form input[type='name'] {
+  width: 290px;
+  padding: 0;
+  float: left;
+  border: 10px solid #2f2f2f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #2f2f2f;
+  font-family: 'Bebas Neue', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: left;
+}
+
+.phase-1 #s4 .contact-wrapper .contact-form input[type='email'] {
+  width: 290px;
+  padding: 0;
+  float: left;
+  border: 10px solid #2f2f2f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #2f2f2f;
+  font-family: 'Bebas Neue', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: left;
+  margin-left: 1em;
 }
 
 .phase-1 #s4 .contact-wrapper .contact-form input[type='button'] {
-  width: 100%;
+  width: 610px;
+  background-color: #ff0000;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  border-radius: 5px;
+  margin-top: 1em;
 }
 
 .form-heading {
@@ -913,7 +1018,8 @@ select {
 
 .phase-3 .top-container .top-wrapper {
   position: relative;
-  margin: 0 65px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .phase-3 .top-container .top-wrapper .main-content {

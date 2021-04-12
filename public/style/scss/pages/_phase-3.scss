@@ -133,8 +133,8 @@
 
     .top-wrapper {
       position: relative;
-      margin: 0 $btn-width;
-
+      margin: 0 auto;
+      max-width: 1200px;
       .main-content {
         background-color: #1f1f1f;
         position: relative;

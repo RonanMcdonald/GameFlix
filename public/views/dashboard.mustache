@@ -171,45 +171,11 @@
             </div>
             <div class="row">
                 {{#demo}}
-                <div class="item-container">
-                    <div class="item">
-                        <img src="{{header_image}}" alt="">
-                        <div class="content">
-                            <div class="top-content">
-                                <div class="title">
-                                    <p>{{name}}</p>
-                                </div>
-                                <div class="list-button">
-                                    <input type="button" value="ADD TO LIST">
-                                </div>
-                            </div>
-                            <div class="review">
-                                <p>Overall User Reviews: <span class="text">Very positive</span> <span
-                                        class="number">(54,620)</span> </p>
-                            </div>
-                            <!-- 
-                            <div class="tag-container">
-                                <div class="tag">FPS</div>
-                                <div class="tag">RPG</div>
-                                <div class="tag">Adventure</div>
-                                <div class="tag">CO-OP</div>
-                                <div class="tag">MMO</div>
-                            </div>
-                            -->
-                            <div class="short-description">
-                                <p>{{short_desc}}</p>
-                            </div>
-                            <div class="bottom-content">
-                                <div class="release-date">
-                                    <p>Release date: <span>{{release_date}}</span> </p>
-                                </div>
-                                <div class="price">
-                                    <p>Price: <span>{{price.is_free}}</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {{#demo.0}}
+                {{#0.0}}
+                <p>This is the name: {{name}}</p>
+                {{/0.0}}
+                {{/demo.0}}
                 {{/demo}}
             </div>
         </div>
@@ -218,7 +184,6 @@
 <script>
 
     $('.item').mouseenter(() => {
-        $(".tooltip").show()
     })
 
     $('#hamburger-icon').click(function () {
@@ -229,7 +194,6 @@
     $(".account-wrapper").mouseenter(function () {
         $(".drop-arrow").animateRotate(180, 100)
         $(".tooltip").show()
-        $()
     })
 
     $(".account-wrapper").mouseleave(function () {
