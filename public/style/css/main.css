@@ -611,10 +611,10 @@ body {
 .phase-1 #s4 .contact-wrapper .contact-form .grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
       grid-template-areas: 'name email . .' 'message message . .' 'button button . .' '. . . .';
 }
@@ -668,7 +668,7 @@ body {
 }
 
 .phase-1 #s4 .contact-wrapper .contact-form input[type='name'] {
-  width: 290px;
+  width: 300px;
   padding: 0;
   float: left;
   border: 10px solid #2f2f2f;
@@ -683,7 +683,7 @@ body {
 }
 
 .phase-1 #s4 .contact-wrapper .contact-form input[type='email'] {
-  width: 290px;
+  width: 300px;
   padding: 0;
   float: left;
   border: 10px solid #2f2f2f;
@@ -695,10 +695,10 @@ body {
   font-weight: normal;
   font-size: 16px;
   text-align: left;
-  margin-left: 1em;
+  margin-left: 0.3em;
 }
 
-.phase-1 #s4 .contact-wrapper .contact-form input[type='button'] {
+.phase-1 #s4 .contact-wrapper .contact-form button {
   width: 610px;
   background-color: #ff0000;
   color: white;
@@ -707,14 +707,35 @@ body {
   font-weight: normal;
   font-size: 24px;
   border-radius: 5px;
-  margin-top: 1em;
+  border: none;
+  margin-top: 0.3em;
+  outline: none;
 }
 
-.form-heading {
+.phase-1 #s4 .contact-info {
+  font-size: 28px;
+  display: inline-block;
+  margin: 25px 10px;
+  margin-left: 6em;
+}
+
+.phase-2 .form-heading {
   font-size: 42px;
 }
 
-.box {
+.phase-2 .profile-pic {
+  font-size: 42px;
+}
+
+.phase-2 .profile-pic img {
+  float: right;
+  width: 40%;
+  height: 40%;
+  margin-right: -3em;
+  margin-top: -1.6em;
+}
+
+.phase-2 .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -743,8 +764,8 @@ body {
   border-radius: 5px;
 }
 
-input[type="text"],
-.box input[type="password"] {
+.phase-2 input[type="text"],
+.phase-2 .box input[type="password"] {
   width: 100%;
   float: left;
   border: 10px solid #2f2f2f;
@@ -753,13 +774,13 @@ input[type="text"],
   background-color: #2f2f2f;
 }
 
-input,
-select,
-textarea {
+.phase-2 input,
+.phase-2 select,
+.phase-2 textarea {
   color: white;
 }
 
-button {
+.phase-2 button {
   background-color: #c52525;
   color: white;
   padding: 7px 20px;
@@ -774,13 +795,27 @@ button {
   border-radius: 5px;
 }
 
-.box-profile {
+.phase-2 .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-left: -2.5em;
+}
+
+.phase-2 .box-profile {
   float: left;
   margin-left: 1em;
   width: 20px;
 }
 
-.button2 {
+.phase-2 .button2 {
   background-color: #2f2f2f;
   font-size: 14px;
   padding: 10px 24px;
@@ -790,7 +825,7 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.button3 {
+.phase-2 .button3 {
   background-color: #2f2f2f;
   font-size: 14px;
   padding: 10px 24px;
@@ -803,7 +838,7 @@ button {
           justify-content: space-between;
 }
 
-.button4 {
+.phase-2 .button4 {
   background-color: #c52525;
   font-size: 14px;
   padding: 10px 24px;
@@ -817,13 +852,13 @@ button {
   float: right;
 }
 
-.profile-pic {
+.phase-2 .profile-pic {
   float: right;
   display: block;
   background: transparent;
 }
 
-select {
+.phase-2 select {
   width: 100%;
   margin: 8px 0á;
   float: left;
@@ -840,45 +875,79 @@ select {
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.dropdown {
-  float: right;
-  display: block;
-  background: transparent;
-  margin-top: -35em;
-  margin-right: 3em;
+.phase-2 p {
+  padding: 0;
+  margin: 0;
 }
 
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 11px;
+.phase-2 .wrapper {
+  max-width: 100% !important;
+  padding: 0 0 200px 0;
 }
 
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
+.phase-2 .navigation {
+  padding: 0 65px;
+  margin-top: 40px;
+  margin-left: 55px;
+  font-size: 16px;
+  max-height: 52px;
+}
+
+.phase-2 .account-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  max-width: 80px;
+  width: 80px;
+  min-height: 52px;
+  position: relative;
+}
+
+.phase-2 .account-wrapper .avatar-icon {
+  margin-right: 10px;
   position: absolute;
-  background-color: #c52525;
-  border-radius: 5px;
-  min-width: 100px;
+  left: 0;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.phase-2 .account-wrapper .drop-arrow {
+  position: absolute;
+  left: 55px;
+}
+
+.phase-2 .account-wrapper:hover .tooltip {
   display: block;
-  text-align: left;
+  cursor: pointer;
 }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
+.phase-2 .account-wrapper .tooltip {
+  display: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 4px 0px;
+  left: -38.5px;
+  margin-top: 180px;
+  position: relative;
+  z-index: 1000;
+  font-size: 12px;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
+.phase-2 .account-wrapper .tooltip::before {
+  content: '';
+  position: absolute;
+  border-left: 13.33333px solid transparent;
+  border-right: 13.33333px solid transparent;
+  border-bottom: 16px solid rgba(255, 255, 255, 0.75);
+  top: -16px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .phase-3 p {

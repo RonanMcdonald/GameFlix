@@ -5,7 +5,7 @@
     {{>partials/head}}
 </head>
 
-<body>
+<body class="phase-2">
     <div class="wrapper">
         <div class="navigation">
             <div class="logo">
@@ -13,14 +13,15 @@
             </div>
             <div class="action">
                 <ul>
-                    <li><a href="login.html">Login</a></li>
-                    <li class="r-bg"><a href="signup.html">Sign up</a></li>
+
+                    <li><a href="/login">Login</a></li>
+                    <li class="r-bg"><a href="/signup">Sign up</a></li>
                 </ul>
             </div>
         </div>
 
-        <form class="box" action="login.html" method="post">
-            <div class="form-heading">
+        <form class=" box " action="login.html " method="post ">
+            <div class="form-heading ">
                 <h>LOGIN</h>
             </div>
             <label for="email"></label>
@@ -29,13 +30,13 @@
             <label for="psw"></label>
             <input type="password" placeholder="PASSWORD" name="psw" required>
 
-            <button type="submit">LOGIN</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> REMEMBER ME
-                <span class="psw"> <a href="#">NEED HELP?</a></span>
-            </label>
-            <br>
-            <span class="su">NEW TO GAMEFLIX? <a href="signup.html">SIGN UP NOW?</a></span>
+            <button type="submit ">LOGIN</button>
+            <label class="container"> 
+                <input type="checkbox" checked="checked" name="remember"> REMEMBER ME          
+                <span class="checkmark"> <a href="#">   NEED HELP?</a> </span>
+              </label>
+
+            <span class="su ">NEW TO GAMEFLIX? <a href='/signup'>SIGN UP NOW?</a></span>
 
         </form>
 </body>

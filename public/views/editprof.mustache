@@ -5,71 +5,68 @@
     {{>partials/head}}
 </head>
 
-<body>
-    <header>
-        <div class="wrapper">
-            <div class="navigation">
-                <div class="logo">
-                    <img src="./style/content/logo/Logo_no_shadow.svg" alt="">
+<body class="phase-2">
+    <div class="wrapper">
+        <div class="navigation">
+            <div class="logo">
+                <img src="./style/content/logo/Logo_no_shadow.svg" alt="">
+            </div>
+
+            <div class="account-wrapper">
+                <span class="tooltip">
+                    <a href="">Account</a>
+                    <a href="">Sign out</a>
+                </span>
+                <div class="avatar-icon">
+                    <img src="./style/content/icons/avatar.png" alt="">
+                </div>
+                <div class="drop-arrow">
+                    <span><img src="./style/content/icons/arrow.svg" alt=""></span>
                 </div>
             </div>
-        </div>
-        <div class="topnav-signup">
-            <div class="dropdown">
-                <img src="style/content/pics/profile.png" src="">
-                <img src="style/content/pics/Polygon1.png" src="">
-                <i class="fa fa-caret-down"></i>
-                <div class="dropdown-content">
-                    <a href="#">Edit Profile</a>
-                    <a href="login.html">login</a>
-                    <a href="signup.html">Sign up</a>
-                    <a href="#">Logout</a>
+
+            <form class="box" action="editprof.html" method="post">
+
+                <div class="form-heading">
+
                 </div>
-            </div>
-        </div>
+                <div class="profile-pic">
+                    <h1>Edit Profile</h1>
+                    <img src="style/content/pics/profile.png" alt="">
+                </div>
+                <label for="uname"></label>
+                <input type="text" placeholder="USERNAME" name="uname" required>
 
-    </header>
-    <form class="box" action="editprof.html" method="post">
-
-        <div class="form-heading">
-            <h>Edit Profile</h>
-        </div>
-        <div class="profile-pic">
-            <img src="style/content/pics/profile.png" alt="">
-        </div>
-        <label for="uname"></label>
-        <input type="text" placeholder="USERNAME" name="uname" required>
-
-        <label for="email"></label>
-        <input type="text" placeholder="EMAIL" name="email" required>
+                <label for="email"></label>
+                <input type="text" placeholder="EMAIL" name="email" required>
 
 
-        <label for="Languages"></label>
-        <select type="text" placeholder="CHOOSE Language" name="lang" required>
+                <label for="Languages"></label>
+                <select type="text" placeholder="CHOOSE Language" name="lang" required>
             <option value="English">English</option>
             <option value="German">German</option>
             <option value="Arabic">Arabic</option>
             <option value="Chinese">Chinese</option>
         </select>
 
-        <h2>PREFERENCES</h2>
-        <div class="text-p">
-            USED TO CREATE CATEGORIES, CLICK TO REMOVE
-        </div>
-        <h2>DELETE PROFILE</h2>
-        <div class="text-p">
-            DELETING PROFILE WILL REMOVE ALL YOUR DATA
-            <button class="button button2">Delete Profile...</button>
+                <h2>PREFERENCES</h2>
+                <div class="text-p">
+                    USED TO CREATE CATEGORIES, CLICK TO REMOVE
+                </div>
+                <h2>DELETE PROFILE</h2>
+                <div class="text-p">
+                    DELETING PROFILE WILL REMOVE ALL YOUR DATA
+                    <button class="button button2">Delete Profile...</button>
 
-        </div>
-        <div class="line3">
+                </div>
+                <div class="line3">
 
-        </div>
-        <div class="bottom-button">
-            <button class="button button3">Cancel</button>
-            <button class="button button4">Save Changes</button>
-        </div>
-    </form>
+                </div>
+                <div class="bottom-button">
+                    <button class="button button3">Cancel</button>
+                    <button class="button button4">Save Changes</button>
+                </div>
+            </form>
 
 </body>
 
