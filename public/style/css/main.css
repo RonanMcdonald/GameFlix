@@ -729,10 +729,34 @@ body {
 
 .phase-2 .profile-pic img {
   float: right;
-  width: 40%;
-  height: 40%;
-  margin-right: -3em;
-  margin-top: -1.6em;
+  width: 30%;
+  height: 30%;
+  margin-right: -2em;
+  margin-top: -2em;
+}
+
+.phase-2 .profile-pic h1 {
+  font-size: 44px;
+}
+
+.phase-2 .heading2 h2 {
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+  color: #FFFFFF;
+}
+
+.phase-2 .text-p p {
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .phase-2 .box {
@@ -822,34 +846,8 @@ body {
   border-radius: 5px;
   width: 55%;
   float: left;
+  color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.6);
-}
-
-.phase-2 .button3 {
-  background-color: #2f2f2f;
-  font-size: 14px;
-  padding: 10px 24px;
-  border-radius: 5px;
-  width: 40%;
-  float: left;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.phase-2 .button4 {
-  background-color: #c52525;
-  font-size: 14px;
-  padding: 10px 24px;
-  border-radius: 5px;
-  width: 60%;
-  float: left;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  float: right;
 }
 
 .phase-2 .profile-pic {
@@ -948,6 +946,51 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.phase-2 .pref-buttons {
+  float: left;
+  margin-left: -1.5em;
+  border-radius: 1px;
+}
+
+.phase-2 .pref-buttons ul {
+  border-radius: 1px;
+}
+
+.phase-2 .pref-buttons ul li {
+  font-size: 10px;
+  width: 50px;
+  height: 32px;
+  margin: 0em;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.phase-2 .pref-add {
+  float: left;
+  margin-left: -1.5em;
+}
+
+.phase-2 .pref-add ul li {
+  font-size: 10px;
+  width: 50px;
+  height: 32px;
+  margin: 0em;
+}
+
+.phase-2 .can-save ul li {
+  font-size: 11px;
+}
+
+.phase-2 .can-save ul .bg {
+  background: #ff0000;
+  border-radius: 3px;
+}
+
+.phase-2 .del-prof ul li {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
 }
 
 .phase-3 p {
