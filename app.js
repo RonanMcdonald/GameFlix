@@ -17,14 +17,20 @@ liveReloadServer.server.once('connection', () => {
 })
 app.use(connectLiveReload())
 
-app.use(express.urlencoded({ extended: true }))
+app.use(express.static(path.join(__dirname, 'public')))
+app.set('views', 'public/views')
 
-const mustache = require('mustache-express')
-app.engine('mustache', mustache())
-app.set('view engine', 'mustache')
-
-app.set('views', __dirname + '/public/views')
-app.use(express.static(publicDirectory))
+var exphbs = require('express-handlebars')
+app.engine(
+  '.hbs',
+  exphbs({
+    defaultLayout: 'main',
+    extname: '.hbs',
+    layoutsDir: '/public/views/layouts',
+    partialsDir: 'server/views/partials',
+  })
+)
+app.set('view engine', '.hbs')
 
 app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')

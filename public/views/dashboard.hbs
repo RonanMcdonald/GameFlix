@@ -2,7 +2,20 @@
 <html lang="en">
 
 <head>
-    {{>partials/head}}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="style/css/glide.core.css">
+
+    <!-- Optional Theme Stylesheet -->
+    <link rel="stylesheet" href="style/css/glide.theme.css">
+
+    <title>Gameflix</title>
 </head>
 
 <body class="phase-3">
@@ -11,6 +24,7 @@
             <div class="logo">
                 <img src="./style/content/logo/Logo_no_shadow.svg" alt="">
             </div>
+            
             <!-- Full navigation -->
             <div class="action">
                 <ul>
@@ -43,6 +57,7 @@
                     <span></span>
                 </div>
             </div>
+            
             <!-- Hamburger Menu -->
             <div class="mobile-navigation">
                 <div class="action">
@@ -57,7 +72,7 @@
             </div>
         </div>
 
-        <div class="top-container">
+        {{!-- <div class="top-container">
             <div class="header">
                 <p>Featured & Recommended</p>
             </div>
@@ -75,9 +90,9 @@
                     <span></span>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
-        <div class="row-container">
+        {{!-- <div class="row-container">
             <div class="header">
                 <p>First person shooter (Exmaple row)</p>
             </div>
@@ -163,62 +178,145 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
+        {{#each demo}}
         <div class="row-container">
             <div class="header">
-                <p>First person shooter</p>
+                <p>{{@key}}</p>
             </div>
             <div class="row">
-                {{#demo}}
-                {{#demo.0}}
-                {{#0.0}}
-                <p>This is the name: {{name}}</p>
-                {{/0.0}}
-                {{/demo.0}}
-                {{/demo}}
+                {{#each this}}
+                <div class="item-container">
+                    <div class="item">
+                        <img src={{this.header_image}} alt="">
+                        <div class="content">
+                            <div class="top-content">
+                                <div class="title">
+                                    <p>{{this.name}}</p>
+                                </div>
+                                <div class="list-button">
+                                    <input type="button" value="ADD TO LIST">
+                                </div>
+                            </div>
+
+                            <div class="review">
+                                <p>Overall User Reviews: <span class="text">Very positive</span> <span
+                                        class="number">({{this.score.total}})</span> </p>
+                            </div>
+                            
+                            <div class="tag-container">
+                                {{#each this.tags}}
+                                <div class="tag">{{this}}</div>
+                                {{/each}}
+                            </div>
+                           
+                            <div class="short-description">
+                                <p>{{this.description.short_desc}} </p>
+                            </div>
+
+                            <div class="bottom-content">
+                                <div class="release-date">
+                                    <p>Release date: <span>{{this.release_date}}</span> </p>
+                                </div>
+                                <div class="price">
+                                    <p>Price: 
+                                        <span>
+                                        <!-- {{this.price.currency}} -->
+                                        {{#if this.price.final}}
+                                            {{this.price.final_formatted}} <!-- Final price -->
+                                        {{else}}
+                                            {{this.price.is_free}} <!-- Free -->
+                                        {{/if}}
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
             </div>
         </div>
-</body>
+        {{/each}}
 
-<script>
+        {{#each demo}}
+        <div class="row-container">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">1</li>
+                        <li class="glide__slide">2</li>
+                        <li class="glide__slide">3</li>
+                    </ul>
 
-    $('.item').mouseenter(() => {
-    })
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
 
-    $('#hamburger-icon').click(function () {
-        $(this).toggleClass('open');
-        $(".mobile-navigation").toggleClass("active");
-    });
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 
-    $(".account-wrapper").mouseenter(function () {
-        $(".drop-arrow").animateRotate(180, 100)
-        $(".tooltip").show()
-    })
+        <script>
+            const options = { 
+                type: "carousel",
+                animationDuration: 100,
+                gap: 0,
+                perView: 2
+            };
 
-    $(".account-wrapper").mouseleave(function () {
-        $(".tooltip").hide()
-        $(".drop-arrow").animateRotate(0)
-    });
+            const carousels = document.querySelectorAll(".glide");
 
-    $.fn.animateRotate = function (angle, duration, easing, complete) {
-        return this.each(function () {
-            var $elem = $(this);
-
-            $({ deg: 0 }).animate({ deg: angle }, {
-                duration: duration,
-                easing: easing,
-                step: function (now) {
-                    $elem.css({
-                        transform: 'rotate(' + now + 'deg)'
-                    });
-                },
-                complete: complete || $.noop
+            Object.values(carousels).map(carousel => {
+                new Glide(carousel, options).mount();
             });
-        });
-    };
 
 
-</script>
 
+
+
+
+
+
+
+            $('.item').mouseenter(() => {
+            })
+
+            $('#hamburger-icon').click(function () {
+                $(this).toggleClass('open');
+                $(".mobile-navigation").toggleClass("active");
+            });
+
+            $(".account-wrapper").mouseenter(function () {
+                $(".drop-arrow").animateRotate(180, 100)
+                $(".tooltip").show()
+            })
+
+            $(".account-wrapper").mouseleave(function () {
+                $(".tooltip").hide()
+                $(".drop-arrow").animateRotate(0)
+            });
+
+            $.fn.animateRotate = function (angle, duration, easing, complete) {
+                return this.each(function () {
+                    var $elem = $(this);
+
+                    $({ deg: 0 }).animate({ deg: angle }, {
+                        duration: duration,
+                        easing: easing,
+                        step: function (now) {
+                            $elem.css({
+                                transform: 'rotate(' + now + 'deg)'
+                            });
+                        },
+                        complete: complete || $.noop
+                    });
+                });
+            };
+    </script>
+</body>
 </html>

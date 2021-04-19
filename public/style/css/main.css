@@ -1305,6 +1305,7 @@ body {
   padding: 5px 10px 5px 10px;
   height: 30px;
   margin-top: 1.5px;
+  color: white;
 }
 
 .phase-3 .row-container .item .content .review {
@@ -1326,6 +1327,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin-top: -5px;
 }
 
 .phase-3 .row-container .item .content .tag-container .tag {
@@ -1334,6 +1341,7 @@ body {
   border-radius: 5px;
   padding: 2px 8px 0px 8px;
   margin-right: 5px;
+  margin-top: 5px;
 }
 
 .phase-3 .row-container .item .content .short-description {
@@ -1397,5 +1405,18 @@ body {
   to {
     opacity: 1;
   }
+}
+
+.container-1 {
+  border: 1px solid red;
+  width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
