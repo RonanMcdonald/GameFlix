@@ -8,12 +8,9 @@
     <link rel="stylesheet" href="style/css/main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    
-    <!-- Required Core Stylesheet -->
-    <link rel="stylesheet" href="style/css/glide.core.css">
 
-    <!-- Optional Theme Stylesheet -->
-    <link rel="stylesheet" href="style/css/glide.theme.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
 
     <title>Gameflix</title>
 </head>
@@ -92,195 +89,88 @@
             </div>
         </div> --}}
 
-        {{!-- <div class="row-container">
-            <div class="header">
-                <p>First person shooter (Exmaple row)</p>
-            </div>
-            <div class="row">
-                <div class="item-container">
-                    <div class="item">
-                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg?t=1612812939" alt="">
-                        <div class="content">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item-container">
-                    <div class="item">
-                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1085660/header.jpg?t=1614104374" alt="">
-                        <div class="content">
-                            <div class="top-content">
-                                <div class="title">
-                                    <p>Destiny 2</p>
-                                </div>
-                                <div class="list-button">
-                                    <input type="button" value="ADD TO LIST">
-                                </div>
-                            </div>
-                            <div class="review">
-                                <p>Overall User Reviews: <span class="text">Very positive</span> <span
-                                        class="number">(54,620)</span> </p>
-                            </div>
-                            <!-- 
-                            <div class="tag-container">
-                                <div class="tag">FPS</div>
-                                <div class="tag">RPG</div>
-                                <div class="tag">Adventure</div>
-                                <div class="tag">CO-OP</div>
-                                <div class="tag">MMO</div>
-                            </div>
-                            -->
-                            <div class="short-description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            </div>
-                            <div class="bottom-content">
-                                <div class="release-date">
-                                    <p>Release date: <span>13 Mar, 2020</span> </p>
-                                </div>
-                                <div class="price">
-                                    <p>Price: <span>£25</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item-container">
-                    <div class="item">
-                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/218620/header.jpg?t=1615989984" alt="">
-                        <div class="content">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item-container">
-                    <div class="item">
-                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/252490/header.jpg?t=1613032122" alt="">
-                        <div class="content">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item-container">
-                    <div class="item">
-                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1616455066" alt="">
-                        <div class="content">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item-container">
-                    <div class="item">
-                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1229490/header.jpg?t=1614731717" alt="">
-                        <div class="content">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-
         {{#each demo}}
-        <div class="row-container">
-            <div class="header">
-                <p>{{@key}}</p>
-            </div>
-            <div class="row">
-                {{#each this}}
-                <div class="item-container">
-                    <div class="item">
-                        <img src={{this.header_image}} alt="">
-                        <div class="content">
-                            <div class="top-content">
-                                <div class="title">
-                                    <p>{{this.name}}</p>
-                                </div>
-                                <div class="list-button">
-                                    <input type="button" value="ADD TO LIST">
-                                </div>
-                            </div>
+        <div class="slider">
+            <h2>{{@key}}</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {{#each this}}
+                    <div class="swiper-slide">
+                            <div class="item">
+                                <img src={{this.header_image}} alt="">
+                                <div class="content">
+                                    <div class="top-content">
+                                        <div class="title">
+                                            <p>{{this.name}}</p>
+                                        </div>
+                                        <div class="list-button">
+                                            <input type="button" value="ADD TO LIST">
+                                        </div>
+                                    </div>
 
-                            <div class="review">
-                                <p>Overall User Reviews: <span class="text">Very positive</span> <span
-                                        class="number">({{this.score.total}})</span> </p>
-                            </div>
-                            
-                            <div class="tag-container">
-                                {{#each this.tags}}
-                                <div class="tag">{{this}}</div>
-                                {{/each}}
-                            </div>
-                           
-                            <div class="short-description">
-                                <p>{{this.description.short_desc}} </p>
-                            </div>
+                                    <div class="review">
+                                        <p>Overall User Reviews: <span class="text">Very positive</span> <span
+                                                class="number">({{this.score.total}})</span> </p>
+                                    </div>
+                                    
+                                    <div class="tag-container">
+                                        {{#each this.tags}}
+                                        <div class="tag">{{this}}</div>
+                                        {{/each}}
+                                    </div>
+                                
+                                    <div class="short-description">
+                                        <p>{{this.description.short_desc}} </p>
+                                    </div>
 
-                            <div class="bottom-content">
-                                <div class="release-date">
-                                    <p>Release date: <span>{{this.release_date}}</span> </p>
+                                    <div class="bottom-content">
+                                        <div class="release-date">
+                                            <p>Release date: <span>{{this.release_date}}</span> </p>
+                                        </div>
+                                        <div class="price">
+                                            <p>Price: 
+                                                <span>
+                                                {{#if this.price.final}}
+                                                    {{this.price.final_formatted}}
+                                                {{else}}
+                                                    {{this.price.is_free}}
+                                                {{/if}}
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="price">
-                                    <p>Price: 
-                                        <span>
-                                        <!-- {{this.price.currency}} -->
-                                        {{#if this.price.final}}
-                                            {{this.price.final_formatted}} <!-- Final price -->
-                                        {{else}}
-                                            {{this.price.is_free}} <!-- Free -->
-                                        {{/if}}
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
                         </div>
                     </div>
+                    {{/each}}
                 </div>
-                {{/each}}
+
+                <!-- Pagination -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
         {{/each}}
 
-        {{#each demo}}
-        <div class="row-container">
-            <div class="glide">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
-                        <li class="glide__slide">1</li>
-                        <li class="glide__slide">2</li>
-                        <li class="glide__slide">3</li>
-                    </ul>
-
-                    <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{/each}}
-
-        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 
         <script>
-            const options = { 
-                type: "carousel",
-                animationDuration: 100,
-                gap: 0,
-                perView: 2
-            };
-
-            const carousels = document.querySelectorAll(".glide");
-
-            Object.values(carousels).map(carousel => {
-                new Glide(carousel, options).mount();
+            var per = 6;
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: per,
+                slidesPerGroup: per,
+                spaceBetween: 9,
+                autoHeight: false,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
             });
-
-
-
-
-
-
-
 
 
             $('.item').mouseenter(() => {
@@ -317,6 +207,14 @@
                     });
                 });
             };
+
+            // Z-Index of card change on hover
+            $('.item')
+            .mouseenter(function() {
+                $(this).parents('.slider').css('z-index', 8000)
+            }).mouseleave(function() {
+                $(this).parents('.slider').css('z-index', 10)
+            });
     </script>
 </body>
 </html>

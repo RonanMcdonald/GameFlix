@@ -1066,7 +1066,7 @@ body {
   left: -38.5px;
   margin-top: 180px;
   position: relative;
-  z-index: 1000;
+  z-index: 9999;
   font-size: 12px;
 }
 
@@ -1211,49 +1211,86 @@ body {
   background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
-.phase-3 .row-container {
-  max-width: 100vw;
-  position: relative;
-  height: 240px;
+.phase-3 :root {
+  --swiper-theme-color: #fff;
 }
 
-.phase-3 .row-container .row {
+.phase-3 .slider {
+  margin: 0 65px 40px 65px;
+  position: relative;
+  min-height: 120px;
+}
+
+.phase-3 .slider h2 {
+  margin: 0 0 4px 0;
+  font-weight: 500;
+  font-family: "Bebas Neue", cursive;
+  font-size: 34px;
+}
+
+.phase-3 .swiper-container {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.phase-3 .swiper-wrapper {
+  margin-bottom: -5px;
+}
+
+.phase-3 .swiper-slide {
+  font-size: 18px;
+}
+
+.phase-3 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.phase-3 .swiper-button-prev,
+.phase-3 .swiper-button-next {
+  height: 155px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-transform: translate(0, -52.5%);
+          transform: translate(0, -52.5%);
+  z-index: 1;
+  color: white;
+  display: none;
+}
+
+.phase-3 .swiper-button-prev {
+  left: -52px;
+}
+
+.phase-3 .swiper-button-next {
+  right: -52px;
+}
+
+.slider:hover .swiper-button-prev,
+.slider:hover .swiper-button-next {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  margin-left: 65px;
-  position: absolute;
 }
 
-.phase-3 .row-container .item-container {
-  width: calc(460px - 120px);
-  height: auto;
-  margin-right: 5px;
+.item {
   position: relative;
-}
-
-.phase-3 .row-container .item-container:hover {
-  z-index: 20;
-}
-
-.phase-3 .row-container .item {
-  position: absolute;
+  z-index: 2;
   -webkit-transition: -webkit-transform 200ms ease-in-out;
   transition: -webkit-transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
-.phase-3 .row-container .item img {
+.item img {
   width: 100%;
   height: 100%;
 }
 
-.phase-3 .row-container .item .content {
+.item .content {
   display: none;
-  position: relative;
+  position: absolute;
   width: 100%;
   top: 100%;
   margin-top: -8px;
@@ -1263,36 +1300,36 @@ body {
           box-sizing: border-box;
 }
 
-.phase-3 .row-container .item .content .title,
-.phase-3 .row-container .item .content .short-description {
+.item .content .title,
+.item .content .short-description {
   font-family: "Roboto", sans-serif;
 }
 
-.phase-3 .row-container .item .content .tag,
-.phase-3 .row-container .item .content .review p,
-.phase-3 .row-container .item .content .bottom-content {
+.item .content .tag,
+.item .content .review p,
+.item .content .bottom-content {
   font-size: 14px;
   letter-spacing: 0.5px;
 }
 
-.phase-3 .row-container .item .content .top-content {
+.item .content .top-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.phase-3 .row-container .item .content .top-content .title {
+.item .content .top-content .title {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.phase-3 .row-container .item .content .top-content .title p {
+.item .content .top-content .title p {
   font-size: 22px;
   font-weight: 400;
 }
 
-.phase-3 .row-container .item .content .top-content .list-button input[type='button'] {
+.item .content .top-content .list-button input[type='button'] {
   cursor: pointer;
   font-family: "Bebas Neue", cursive;
   font-size: 14px;
@@ -1308,22 +1345,22 @@ body {
   color: white;
 }
 
-.phase-3 .row-container .item .content .review {
+.item .content .review {
   background-color: #373737;
   padding: 3.5px 8px 1px 8px;
   margin: 5px 0;
   border-radius: 5px;
 }
 
-.phase-3 .row-container .item .content .review p {
+.item .content .review p {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.phase-3 .row-container .item .content .review .text {
+.item .content .review .text {
   color: #00d1ff;
 }
 
-.phase-3 .row-container .item .content .tag-container {
+.item .content .tag-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1335,7 +1372,7 @@ body {
   margin-top: -5px;
 }
 
-.phase-3 .row-container .item .content .tag-container .tag {
+.item .content .tag-container .tag {
   background-color: #373737;
   color: rgba(255, 255, 255, 0.75);
   border-radius: 5px;
@@ -1344,13 +1381,13 @@ body {
   margin-top: 5px;
 }
 
-.phase-3 .row-container .item .content .short-description {
+.item .content .short-description {
   margin: 10px 0;
   font-size: 14px;
   line-height: 1.1;
 }
 
-.phase-3 .row-container .item .content .bottom-content {
+.item .content .bottom-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1359,29 +1396,29 @@ body {
           justify-content: space-between;
 }
 
-.phase-3 .row-container .item .content .bottom-content .release-date {
+.item .content .bottom-content .release-date {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.phase-3 .row-container .item .content .bottom-content .release-date span {
+.item .content .bottom-content .release-date span {
   color: #00d1ff;
 }
 
-.phase-3 .row-container .item .content .bottom-content .price {
+.item .content .bottom-content .price {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.phase-3 .row-container .item .content .bottom-content .price span {
+.item .content .bottom-content .price span {
   color: #00d1ff;
 }
 
-.phase-3 .row-container .item:hover {
-  z-index: 20;
+.item:hover {
+  z-index: 40;
   -webkit-transform: scale(1.2) translateY(-50px);
           transform: scale(1.2) translateY(-50px);
 }
 
-.phase-3 .row-container .item:hover .content {
+.item:hover .content {
   display: block;
   -webkit-animation: fadeIn 200ms;
           animation: fadeIn 200ms;
@@ -1405,18 +1442,5 @@ body {
   to {
     opacity: 1;
   }
-}
-
-.container-1 {
-  border: 1px solid red;
-  width: 1200px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
