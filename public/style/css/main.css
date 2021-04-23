@@ -993,6 +993,10 @@ body {
   font-size: 11px;
 }
 
+.phase-3 {
+  overflow: hidden !important;
+}
+
 .phase-3 p {
   padding: 0;
   margin: 0;
@@ -1418,6 +1422,7 @@ body {
   z-index: 40;
   -webkit-transform: scale(1.2) translateY(-50px);
           transform: scale(1.2) translateY(-50px);
+  cursor: pointer;
 }
 
 .item:hover .content {
@@ -1444,5 +1449,17 @@ body {
   to {
     opacity: 1;
   }
+}
+
+.large-game-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 8999;
+  height: 400px;
+  width: 1000px;
+  background-color: green;
 }
 /*# sourceMappingURL=main.css.map */

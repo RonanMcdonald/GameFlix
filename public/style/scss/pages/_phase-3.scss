@@ -1,5 +1,6 @@
 .phase-3 {
   $wrapper_padding: 0 65px;
+  overflow: hidden !important;
   p {
     padding: 0;
     margin: 0;
@@ -343,6 +344,7 @@
   &:hover {
     z-index: 40;
     transform: scale(1.2) translateY(-50px);
+    cursor: pointer;
   }
   // Opacity causes visual issues
   &:hover .content {
@@ -358,4 +360,17 @@
       opacity: 1;
     }
   }
+}
+
+.large-game-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8999;
+
+  height: 400px;
+  width: 1000px;
+
+  background-color: green;
 }

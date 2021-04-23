@@ -103,9 +103,9 @@
                                         <div class="title">
                                             <p>{{this.name}}</p>
                                         </div>
-                                        <div class="list-button">
+                                        {{!-- <div class="list-button">
                                             <input type="button" value="ADD TO LIST">
-                                        </div>
+                                        </div> --}}
                                     </div>
 
                                     <div class="review">
@@ -152,14 +152,13 @@
         </div>
         {{/each}}
 
+ 
+
         <!-- Swiper JS -->
         <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 
         <script>
-            var per = 5;
             var swiper = new Swiper('.swiper-container', {
-                slidesPerView: per,
-                slidesPerGroup: per,
                 spaceBetween: 8,
                 autoHeight: false,
                 pagination: {
@@ -170,6 +169,24 @@
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
+                breakpoints: {
+                    600: {
+                        slidesPerView: 2,
+                        slidesPerGroup: 2,
+                    },
+                    900: {
+                        slidesPerView: 3,
+                        slidesPerGroup: 3,
+                    },
+                    1440: {
+                        slidesPerView: 4,
+                        slidesPerGroup: 4,
+                    },
+                    1680: {
+                        slidesPerView: 5,
+                        slidesPerGroup: 5,
+                    }
+                }
             });
 
 
