@@ -94,7 +94,7 @@
             <h2>{{@key}}</h2>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    {{#each this}}
+                    {{#each this}} 
                     <div class="swiper-slide">
                             <div class="item">
                                 <img src={{this.header_image}} alt="">
@@ -152,12 +152,87 @@
         </div>
         {{/each}}
 
- 
+        <div class="large-game-wrapper">
+            <div class="background"></div>
+            <div class="foreground">
+                {{#each demo}}
+                    {{#each this}}
+                        <div class="large-game-container">
+                            <div class="col-1">
+                                <div class="showcase-wrapper">
+                                    <video controls preload="none" class="video" id="video">
+                                           <source src={{this.movies.mp4}}#t=2 type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="showcase-content">
+                                    <div class="showcase-heading">
+                                        <p>About this game</p>
+                                    </div>
+                                    {{this.description.long_desc}}
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                .reviews
+                                <div class="tags">
+                                    <div class="tag-container">
+                                        {{#each this.tags}}
+                                        <div class="tag">{{this}}</div>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p>{{this.description.about_desc}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                {{/each}}
+            </div>
+        </div>
 
         <!-- Swiper JS -->
         <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-
         <script>
+            
+
+            // Asign ID to small game container
+            $(".swiper-slide").each(function(index) {
+                $(this).attr("id", "s-" + index)
+            });
+
+            // Asign ID to large game container
+            $(".large-game-container").each(function(index) {
+                $(this).attr("id", "l-" + index)
+                $(this).hide()
+            });
+
+            $(".large-game-wrapper").hide()
+
+            // Get small game container on click
+            $(".swiper-slide").click(function(index) {
+                console.log("CL", $(this).attr("id"))
+                console.log("CL", $(this).attr("class").split(' ')[0])
+
+                var x = $(this).attr("id").replaceAll("s", "l") // Convert Small ID to Large ID
+                $("#" + x + " .col-1 .showcase-wrapper video").attr("preload", "metadata") // Set to load video
+    
+                $("#" + x).show()
+                $(".large-game-wrapper").show()
+            });
+
+            // When game container not clicked
+            $(document).mouseup(function (e) {
+                if ($(e.target).closest(".large-game-container").length === 0) {
+                    $('video').trigger('pause'); // Pause all videos
+                    $(".large-game-container").hide() // Hide container
+                    $(".large-game-wrapper").hide() // Hide wrapper
+                }
+            });
+
+            $("#l-15").show()
+            $("#l-15" + " .col-1 .showcase-wrapper video").attr("preload", "metadata") // Set to load video
+            $(".large-game-wrapper").show()
+
             var swiper = new Swiper('.swiper-container', {
                 spaceBetween: 8,
                 autoHeight: false,
@@ -174,11 +249,11 @@
                         slidesPerView: 2,
                         slidesPerGroup: 2,
                     },
-                    900: {
+                    1000: {
                         slidesPerView: 3,
                         slidesPerGroup: 3,
                     },
-                    1440: {
+                    1340: {
                         slidesPerView: 4,
                         slidesPerGroup: 4,
                     },
@@ -188,10 +263,6 @@
                     }
                 }
             });
-
-
-            $('.item').mouseenter(() => {
-            })
 
             $('#hamburger-icon').click(function () {
                 $(this).toggleClass('open');
@@ -232,6 +303,13 @@
             }).mouseleave(function() {
                 $(this).parents('.slider').css('z-index', 10)
             });
+
+
+
+        
     </script>
 </body>
 </html>
+
+
+
