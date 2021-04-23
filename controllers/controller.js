@@ -5,18 +5,18 @@ const { count } = require('console')
 
 // Splash
 exports.renderPhase_1 = (req, res) => {
-  res.render('index')
+  res.render('index', { layout: false })
 }
 
 // Account
 exports.renderPhase_2 = (req, res) => {
-  res.render('login')
+  res.render('login', { layout: false })
 }
 exports.renderPhase_2_1 = (req, res) => {
-  res.render('signup')
+  res.render('signup', { layout: false })
 }
 exports.renderPhase_2_2 = (req, res) => {
-  res.render('editprof')
+  res.render('editprof', { layout: false })
 }
 
 // Dashboard
