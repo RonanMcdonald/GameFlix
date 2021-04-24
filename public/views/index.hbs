@@ -203,26 +203,27 @@
 
                     <div class="contact-wrapper">
                         <div class="contact-form">
-                            <form action="">
+                            <form action="https://formspree.io/f/xknkgaeo" method="POST" id="form">
                                 <div class="grid-container">
                                     <div class="name">
-                                        <input type="name" name="" id="" required placeholder="Name">
+                                        <input type="name" name="Name" id="" required placeholder="Name">
                                     </div>
                                     <div class="email">
-                                        <input type="email" name="" id="" required placeholder="Email">
+                                        <input type="email" name="Email" id="" required placeholder="Email">
                                     </div>
                                     <div class="message">
-                                        <textarea name="message" id="" required placeholder="Message"></textarea>
+                                        <textarea name="Message" id="" required placeholder="Message"></textarea>
                                     </div>
                                     <div class="button">
-                                        <button type="button">Send Message</button>
+                                      <button class="button button1">Send Message</button>
                                     </div>
+                                      <div id="status"></div>
                                 </div>
                             </form>
                         </div>
                         <div class="contact-info">
                             <ul>
-                                <li><img src="/style/content/icons/envelope.png" alt=""> Gameflix@hotmail.com</li>
+                                <li><img src="/style/content/icons/envelope.png" alt=""> Gameflix@mail.com</li>
                                 <li><img src="/style/content/icons/map.png" alt=""> G42 7BP</li>
 
                             </ul>
@@ -273,6 +274,28 @@
             })
         })
     </script>
+    <script>
+    var form = document.getElementById("form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Message Sent! Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
 </body>
 
 </html>

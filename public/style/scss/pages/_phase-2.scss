@@ -148,6 +148,20 @@
         font-size: 16px;
         // font-family: $font-3-roboto;
         max-height: 52px;
+        .action {
+            ul {
+                li {
+                    padding: 7px 22px;
+                    font-size: 1.6em;
+                    letter-spacing: 0.05rem;
+                }
+                a {
+                    padding: 0;
+                    font-size: inherit;
+                    letter-spacing: inherit;
+                }
+            }
+        }
     }
     .account-wrapper {
         display: flex;
@@ -198,46 +212,57 @@
     }
     .pref-buttons {
         float: left;
-        margin-left: -1.5em;
+        margin-left: 0em;
         border-radius: 1px;
         ul {
             border-radius: 1px;
             li {
-                font-size: 10px;
-                width: 50px;
-                height: 32px;
+                background: rgba(255, 255, 255, 0.04);
+                font-size: 8px;
+                //  width: 20px;
+                height: 26px;
+                width: 80px;
                 margin: 0em;
                 border-radius: 3px;
-                padding: 3px;
+                //   padding: 1px 1px;
+                text-align: center;
             }
         }
     }
     .pref-add {
-        float: left;
-        margin-left: -1.5em;
         ul {
             li {
-                font-size: 10px;
-                width: 50px;
-                height: 32px;
-                margin: 0em;
+                margin-top: 1em;
+                border-radius: 5px;
+                border: 1px solid;
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 11px;
+                height: 35px;
+                //width: 50px;
+                text-align: center;
             }
         }
     }
     .can-save {
         ul {
             li {
+                border-radius: 5px;
+                border: 0.1px solid;
                 font-size: 11px;
             }
             .bg {
                 background: #ff0000;
                 border-radius: 3px;
+                border: none;
             }
         }
     }
     .del-prof {
         ul {
             li {
+                margin-bottom: 1em;
+                border-radius: 5px;
+                border: 1px solid;
                 color: rgba(255, 255, 255, 0.6);
                 font-size: 11px;
             }
