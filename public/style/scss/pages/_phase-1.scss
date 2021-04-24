@@ -160,6 +160,7 @@
         }
         // Main
         .item {
+            transform: none;
             height: fit-content;
             cursor: pointer;
             .title {
