@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style/css/main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    
+    <script type="text/javascript" src="jquery.lazy-master/jquery.lazy.min.js"></script>
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -161,27 +163,31 @@
                             <div class="col-1">
                                 <div class="showcase-wrapper">
                                     <video controls preload="none" class="video" id="video">
-                                           <source src={{this.movies.mp4}}#t=2 type="video/mp4">
+                                           <source src={{this.movies.mp4}}#t=2  loading="lazy" type="video/mp4">
                                     </video>
                                 </div>
                                 <div class="showcase-content">
                                     <div class="showcase-heading">
-                                        <p>About this game</p>
+                                        {{!-- <p>ABOUT</p> --}}
                                     </div>
-                                    {{this.description.long_desc}}
+                                    {{{this.description.long_desc}}}
                                 </div>
                             </div>
                             <div class="col-2">
-                                .reviews
-                                <div class="tags">
-                                    <div class="tag-container">
-                                        {{#each this.tags}}
-                                        <div class="tag">{{this}}</div>
-                                        {{/each}}
-                                    </div>
+                                <div class="header-image">
+                                    <img src={{this.header_image}}  loading="lazy" alt="">
                                 </div>
-                                <div class="content">
-                                    <p>{{this.description.about_desc}}</p>
+                                <div class="col-2-inner">
+                                    <div class="tags">
+                                        <div class="tag-container">
+                                            {{#each this.tags}}
+                                            <div class="tag">{{this}}</div>
+                                            {{/each}}
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        {{this.description.short_desc}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +199,7 @@
         <!-- Swiper JS -->
         <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
         <script>
-            
+            $('img').lazy();
 
             // Asign ID to small game container
             $(".swiper-slide").each(function(index) {
