@@ -570,6 +570,8 @@ body {
 }
 
 .phase-1 #s3 .item {
+  -webkit-transform: none;
+          transform: none;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -650,6 +652,12 @@ body {
   display: block;
 }
 
+.phase-1 #s4 .contact-wrapper .contact-form input,
+.phase-1 #s4 .contact-wrapper .contact-form select,
+.phase-1 #s4 .contact-wrapper .contact-form textarea {
+  color: white;
+}
+
 .phase-1 #s4 .contact-wrapper .contact-form textarea {
   width: 610px;
   height: 175px;
@@ -710,6 +718,66 @@ body {
   border: none;
   margin-top: 0.3em;
   outline: none;
+}
+
+.phase-1 #s4 .contact-wrapper .contact-form .button1:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.phase-1 #s4 .contact-wrapper .contact-form #status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+  position: absolute;
+  margin-top: 17em;
+  margin-left: 3em;
+}
+
+.phase-1 #s4 .contact-wrapper .contact-form #status.success {
+  background-color: #d3fa99;
+  -webkit-animation: status 4s ease forwards;
+          animation: status 4s ease forwards;
+}
+
+.phase-1 #s4 .contact-wrapper .contact-form .status.error {
+  background-color: #fa815c;
+  color: white;
+  -webkit-animation: status 4s ease forwards;
+          animation: status 4s ease forwards;
+}
+
+@-webkit-keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .phase-1 #s4 .contact-info {
@@ -891,6 +959,18 @@ body {
   max-height: 52px;
 }
 
+.phase-2 .navigation .action ul li {
+  padding: 7px 22px;
+  font-size: 1.6em;
+  letter-spacing: 0.05rem;
+}
+
+.phase-2 .navigation .action ul a {
+  padding: 0;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+
 .phase-2 .account-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -950,7 +1030,7 @@ body {
 
 .phase-2 .pref-buttons {
   float: left;
-  margin-left: -1.5em;
+  margin-left: 0em;
   border-radius: 1px;
 }
 
@@ -959,36 +1039,41 @@ body {
 }
 
 .phase-2 .pref-buttons ul li {
-  font-size: 10px;
-  width: 50px;
-  height: 32px;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 8px;
+  height: 26px;
+  width: 80px;
   margin: 0em;
   border-radius: 3px;
-  padding: 3px;
-}
-
-.phase-2 .pref-add {
-  float: left;
-  margin-left: -1.5em;
+  text-align: center;
 }
 
 .phase-2 .pref-add ul li {
-  font-size: 10px;
-  width: 50px;
-  height: 32px;
-  margin: 0em;
+  margin-top: 1em;
+  border-radius: 5px;
+  border: 1px solid;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  height: 35px;
+  text-align: center;
 }
 
 .phase-2 .can-save ul li {
+  border-radius: 5px;
+  border: 0.1px solid;
   font-size: 11px;
 }
 
 .phase-2 .can-save ul .bg {
   background: #ff0000;
   border-radius: 3px;
+  border: none;
 }
 
 .phase-2 .del-prof ul li {
+  margin-bottom: 1em;
+  border-radius: 5px;
+  border: 1px solid;
   color: rgba(255, 255, 255, 0.6);
   font-size: 11px;
 }
