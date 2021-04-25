@@ -408,6 +408,11 @@ body {
   display: flex;
 }
 
+.phase-1 .navigation .logo {
+  margin-left: -1em;
+  width: 20%;
+}
+
 .phase-1 .navigation ul li {
   padding: 7px 22px;
   font-size: 1.6em;
@@ -787,6 +792,21 @@ body {
   margin-left: 6em;
 }
 
+.phase-2 {
+  /*
+    label {
+        display: block;
+        transform: translate(0, -2.75rem);
+        margin-left: 1em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    input:focus+label,
+    input:not(:placeholder-shown)+label {
+        transform: translateY(-3em) scale(0.5);
+    }
+    */
+}
+
 .phase-2 .form-heading {
   font-size: 42px;
 }
@@ -808,6 +828,7 @@ body {
 }
 
 .phase-2 .heading2 h2 {
+  margin-top: 0.5em;
   font-family: Bebas Neue;
   font-style: normal;
   font-weight: normal;
@@ -818,6 +839,7 @@ body {
 }
 
 .phase-2 .text-p p {
+  margin-top: -1em;
   font-family: Bebas Neue;
   font-style: normal;
   font-weight: normal;
@@ -845,7 +867,7 @@ body {
   width: 250px;
   padding: 40px;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -859,11 +881,104 @@ body {
 .phase-2 input[type="text"],
 .phase-2 .box input[type="password"] {
   width: 100%;
-  float: left;
-  border: 10px solid #2f2f2f;
+  padding: 12px 20px;
+  border-radius: 5px;
+  margin: 8px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+  float: left;
+  box-sizing: border-box;
   background-color: #2f2f2f;
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.phase-2 input[type="uname"],
+.phase-2 .box input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 5px;
+  margin: 8px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+  float: left;
+  box-sizing: border-box;
+  background-color: #2f2f2f;
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.phase-2 input[type="text"],
+.phase-2 .box input[type="password"]:focus {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 5px;
+}
+
+.phase-2 input[type="text"],
+.phase-2 .box input[type="uname"]:focus {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 5px;
+}
+
+.phase-2 ::-webkit-input-placeholder:focus + label {
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+}
+
+.phase-2 :-ms-input-placeholder:focus + label {
+  transform: translateY(-1em);
+}
+
+.phase-2 ::-ms-input-placeholder:focus + label {
+  transform: translateY(-1em);
+}
+
+.phase-2 ::placeholder:focus + label {
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+}
+
+.phase-2 input,
+.phase-2 select,
+.phase-2 textarea {
+  color: white;
+}
+
+.phase-2 .box1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 40px 45px;
+  width: 250px;
+  padding: 40px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 300px;
+  background: #2F2F2F;
+  -webkit-box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
 }
 
 .phase-2 input,
@@ -899,6 +1014,66 @@ body {
   -ms-user-select: none;
   user-select: none;
   margin-left: -2.5em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.phase-2 .container a:visited {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.phase-2 .container span {
+  margin-left: 5.5em;
+}
+
+.phase-2 .bot {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.phase-2 .bot a:visited {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.phase-2 .bot1 {
+  margin-top: -1em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.phase-2 .bot1 a:visited {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.phase-2 .checkmark a:visited {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.phase-2 .container-s {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.phase-2 .container-s a:visited {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.phase-2 .container-s span {
+  margin-left: 5.5em;
+}
+
+.phase-2 .bot {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.phase-2 .bot a:visited {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .phase-2 .box-profile {
@@ -957,6 +1132,12 @@ body {
   margin-left: 55px;
   font-size: 16px;
   max-height: 52px;
+}
+
+.phase-2 .navigation .logo {
+  margin-top: 1em;
+  margin-left: -6em;
+  width: 22%;
 }
 
 .phase-2 .navigation .action ul li {
@@ -1039,10 +1220,9 @@ body {
 }
 
 .phase-2 .pref-buttons ul li {
-  background: rgba(255, 255, 255, 0.04);
   font-size: 8px;
-  height: 26px;
-  width: 80px;
+  height: 25px;
+  width: 50px;
   margin: 0em;
   border-radius: 3px;
   text-align: center;
@@ -1053,29 +1233,41 @@ body {
   border-radius: 5px;
   border: 1px solid;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 11px;
-  height: 35px;
+  font-size: 8px;
+  height: 25px;
   text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1px;
+  margin-bottom: 1em;
 }
 
 .phase-2 .can-save ul li {
   border-radius: 5px;
   border: 0.1px solid;
   font-size: 11px;
+  padding: 1px 10px;
 }
 
 .phase-2 .can-save ul .bg {
   background: #ff0000;
   border-radius: 3px;
   border: none;
+  margin-left: 1em;
 }
 
 .phase-2 .del-prof ul li {
-  margin-bottom: 1em;
+  margin-top: 1em;
   border-radius: 5px;
   border: 1px solid;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 11px;
+  font-size: 8px;
+  height: 25px;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1px;
+  margin-bottom: 1em;
 }
 
 .phase-3 {

@@ -30,6 +30,10 @@
         display: flex;
     }
     .navigation {
+        .logo {
+            margin-left: -1em;
+            width: 20%;
+        }
         ul {
             li {
                 padding: 7px 22px;
