@@ -136,7 +136,7 @@
   }
   #s3 {
     // Typography
-    .faq-item {
+    .item {
       p {
         padding: 0;
         margin: 0;
@@ -149,11 +149,11 @@
       }
     }
     // Padding
-    .faq-item .title,
+    .item .title,
     .content {
       padding: 7px 28px;
     }
-    .faq-wrapper {
+    .wrapper {
       margin-top: 25px;
       width: 100%;
       height: 100%;

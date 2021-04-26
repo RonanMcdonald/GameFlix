@@ -11,6 +11,10 @@
       grid-template-rows: 1fr;
       gap: 25px;
     }
+    .cb-active {
+      background-color: $main-color;
+      color: $main-color;
+    }
     span {
       content: '';
       position: relative;
@@ -45,9 +49,4 @@
       cursor: pointer;
     }
   }
-}
-
-.cb-active {
-  background-color: $main-color;
-  color: $main-color;
 }
