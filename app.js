@@ -7,15 +7,15 @@ var connectLiveReload = require('connect-livereload')
 var publicDirectory = __dirname + '/public'
 
 // Front-End LiveReload.
-// var livereload = require('livereload')
-// var liveReloadServer = livereload.createServer()
-// liveReloadServer.watch(publicDirectory)
-// liveReloadServer.server.once('connection', () => {
-//   setTimeout(() => {
-//     liveReloadServer.refresh('/')
-//   }, 8)
-// })
-// app.use(connectLiveReload())
+var livereload = require('livereload')
+var liveReloadServer = livereload.createServer()
+liveReloadServer.watch(publicDirectory)
+liveReloadServer.server.once('connection', () => {
+  setTimeout(() => {
+    liveReloadServer.refresh('/')
+  }, 8)
+})
+app.use(connectLiveReload())
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.set('views', 'public/views')
