@@ -1,51 +1,53 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-    margin-top: 15px;
-    .carosel-buttons {
-        ul {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr;
-            gap: 25px;
-        }
-        span {
-            content: "";
-            position: relative;
-            width: 30px;
-            height: 30px;
-            background-color: rgba(128, 128, 128, 0.350);
-            display: block;
-        }
-        .cb-active {
-            background-color: $main-color;
-        }
-        li:hover {
-            cursor: pointer;
-            background-color: $main-color;
-            opacity: 80%;
-        }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 15px;
+  .carosel-buttons {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 25px;
     }
-    .links {
-        li {
-            display: inline-block;
-        }
-        li:nth-child(2) {
-            margin: 0 15px;
-        }
-        a {
-            display: block;
-            font-family: $font-3-roboto;
-            padding: 7px 18px;
-            border-radius: 5px;
-            border: 1px solid transparent;
-        }
-        a:hover {
-            background-color: #222222;
-            border: 1px solid #111111;
-            cursor: pointer;
-        }
+    span {
+      content: '';
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background-color: rgba(128, 128, 128, 0.35);
+      display: block;
     }
+    li:hover {
+      cursor: pointer;
+      background-color: $main-color;
+      opacity: 80%;
+    }
+  }
+  .links {
+    li {
+      display: inline-block;
+    }
+    li:nth-child(2) {
+      margin: 0 15px;
+    }
+    a {
+      display: block;
+      font-family: $font-3-roboto;
+      padding: 7px 18px;
+      border-radius: 5px;
+      border: 1px solid transparent;
+    }
+    a:hover {
+      background-color: #222222;
+      border: 1px solid #111111;
+      cursor: pointer;
+    }
+  }
+}
+
+.cb-active {
+  background-color: $main-color;
+  color: $main-color;
 }

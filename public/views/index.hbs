@@ -42,11 +42,9 @@
                 <div class="action">
                     <ul>
                         <li>
-                            <a href=""></a>
-                            <a href=""></a>
-                            <a href=""></a>
-                            <a href=""></a>
-                            <a href=""></a>
+                            <li><a href='/dashboard'>Demo</a></li>
+                            <li><a href="/login">Login</a></li>
+                            <li class="r-bg"><a href="/signup">Sign up</a></li>
                         </li>
                     </ul>
                 </div>
@@ -109,7 +107,7 @@
 
                     <div class="button">
                         <ul>
-                            <li><a href="/dashboard" class="r-bg">  DEMO  </a></li>
+                            <li><a href="/dashboard" class="r-bg">DEMO</a></li>
                         </ul>
                     </div>
                 </div>
@@ -246,9 +244,10 @@
             </div>
             <div class="links">
                 <ul>
-                    <li><a>About</a></li>
-                    <li><a>FAQ</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a id="1">Home</a></li>
+                    <li><a id="2">About</a></li>
+                    <li><a id="3">FAQ</a></li>
+                    <li><a id="4">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -257,11 +256,26 @@
     <script>
         // Page carosel
         $('.middle > div').hide();
-        $('.middle').children(":nth-child(4)").show()
+        $('.middle').children(":nth-child(1)").show()
+        
+        // Square button click
         $('.carosel-buttons ul li span').click(function() {
             $(".carosel-buttons ul li span").removeClass("cb-active");
             $(this).addClass("cb-active");
 
+            $('.middle > div').hide();
+            $('.middle > div').eq($(this).parent().index()).show();
+        })
+
+        // Link click
+        $('.links ul li a').click(function() {
+            $(this).attr('id')
+
+            console.log($('.carosel-buttons ul li span #' + $(this).attr('id')))
+            console.log('.carosel-buttons ul li span #' + $(this).attr('id'))
+
+            $(".carosel-buttons ul li span").removeClass("cb-active");
+            $('.carosel-buttons ul li #' + $(this).attr('id')).addClass("cb-active")
             $('.middle > div').hide();
             $('.middle > div').eq($(this).parent().index()).show();
         })
@@ -271,9 +285,7 @@
         $('.item').click(function() {
             console.log($('.content', this).text());
 
-            $('.content', this).slideToggle('fast', function() {
-
-            })
+            $('.content', this).slideToggle('fast')
         })
     </script>
     <script>
