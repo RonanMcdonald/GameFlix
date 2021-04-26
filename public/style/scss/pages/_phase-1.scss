@@ -1,188 +1,188 @@
 .phase-1 {
-    // Typograhpy
-    h1 {
-        font-size: 82px;
-        opacity: 90%;
-        padding: 0;
-        margin: 0;
-        max-width: 100%;
+  // Typograhpy
+  h1 {
+    font-size: 82px;
+    opacity: 90%;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+  p {
+    font-size: 42px;
+    opacity: 80%;
+  }
+  li {
+    font-size: 1.6em;
+    opacity: 90%;
+  }
+  a {
+    color: white;
+  }
+  // List Style
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  // Body
+  .body {
+    flex: 1;
+    display: flex;
+  }
+  .navigation {
+    .logo {
+      margin-left: -1em;
+      width: 20%;
     }
-    p {
-        font-size: 42px;
-        opacity: 80%;
-    }
-    li {
-        font-size: 1.6em;
-        opacity: 90%;
-    }
-    a {
-        color: white;
-    }
-    // List Style
     ul {
-        list-style: none;
-        margin: 0;
+      li {
+        padding: 7px 22px;
+        font-size: 1.6em;
+        letter-spacing: 0.05rem;
+      }
+      a {
         padding: 0;
+        font-size: inherit;
+        letter-spacing: inherit;
+      }
     }
-    // Body
-    .body {
-        flex: 1;
-        display: flex;
+  }
+  // Middle
+  .middle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto 0;
+    width: 100%;
+    min-height: 500px;
+  }
+  .section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    // Header
+    .header {
+      width: 100%;
+      height: fit-content;
     }
-    .navigation {
-        .logo {
-            margin-left: -1em;
-            width: 20%;
-        }
-        ul {
-            li {
-                padding: 7px 22px;
-                font-size: 1.6em;
-                letter-spacing: 0.05rem;
-            }
-            a {
-                padding: 0;
-                font-size: inherit;
-                letter-spacing: inherit;
-            }
-        }
+    .content {
+      margin-top: 25px;
+      width: 100%;
+      box-sizing: border-box;
     }
-    // Middle
-    .middle {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: auto 0;
-        width: 100%;
-        min-height: 500px;
+    .button {
+      width: 100%;
+      height: 100%;
+      ul {
+        padding-bottom: 25px;
+        position: absolute;
+        bottom: 0;
+      }
     }
-    .section {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        position: relative;
-        // Header
-        .header {
-            width: 100%;
-            height: fit-content;
-        }
-        .content {
-            margin-top: 25px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .button {
-            width: 100%;
-            height: 100%;
-            ul {
-                padding-bottom: 25px;
-                position: absolute;
-                bottom: 0;
-            }
-        }
-    }
-    #s1 {
-        .b-left {
-            display: flex;
-            flex-direction: column;
-            margin-right: 140px;
-            .content {
-                line-height: 1.4;
-                margin: 0;
-                p {
-                    margin-top: -8px;
-                }
-                p:nth-child(2) {
-                    padding: 0;
-                    margin: 0;
-                    margin-top: -35px;
-                }
-            }
-        }
-        .b-right {
-            position: relative;
-            height: fit-content;
-            .fg-image {
-                img {
-                    width: 100%;
-                    height: 100%;
-                    display: block;
-                }
-            }
-            .fg-image:nth-child(2) {
-                position: absolute;
-                top: 0;
-                right: -120%;
-            }
-        }
-    }
-    #s2 {
-        overflow: hidden;
+  }
+  #s1 {
+    .b-left {
+      display: flex;
+      flex-direction: column;
+      margin-right: 140px;
+      .content {
+        line-height: 1.4;
+        margin: 0;
         p {
-            max-width: 720px;
-            line-height: 1.2;
+          margin-top: -8px;
         }
-        .bullet-points {
-            list-style: disc;
-            width: 100%;
-            margin-top: -25px;
-            font-size: 20px;
-            padding-left: 2.5px;
-            span {
-                display: inline-block;
-                padding: 0 15px 0 25px;
-            }
+        p:nth-child(2) {
+          padding: 0;
+          margin: 0;
+          margin-top: -35px;
         }
+      }
     }
-    #s3 {
-        // Typography
-        .item {
-            p {
-                padding: 0;
-                margin: 0;
-            }
-            .title p {
-                font-size: 30px;
-            }
-            .content p {
-                font-size: 24px;
-            }
+    .b-right {
+      position: relative;
+      height: fit-content;
+      .fg-image {
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
         }
-        // Padding
-        .item .title,
-        .content {
-            padding: 7px 28px;
-        }
-        .faq-wrapper {
-            margin-top: 25px;
-            width: 100%;
-            height: 100%;
-            display: grid;
-            // grid-template-columns: repeat(2, 1fr);
-            gap: 15px 15px;
-            grid-auto-rows: min-content;
-        }
-        // Main
-        .item {
-            transform: none;
-            height: fit-content;
-            cursor: pointer;
-            .title {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                background-color: #2f2f2f;
-                span {
-                    padding-left: 25px;
-                }
-            }
-            .content {
-                background-color: #1f1f1f;
-                margin: 0;
-            }
-        }
+      }
+      .fg-image:nth-child(2) {
+        position: absolute;
+        top: 0;
+        right: -120%;
+      }
     }
-    /*
+  }
+  #s2 {
+    overflow: hidden;
+    p {
+      max-width: 720px;
+      line-height: 1.2;
+    }
+    .bullet-points {
+      list-style: disc;
+      width: 100%;
+      margin-top: -25px;
+      font-size: 20px;
+      padding-left: 2.5px;
+      span {
+        display: inline-block;
+        padding: 0 15px 0 25px;
+      }
+    }
+  }
+  #s3 {
+    // Typography
+    .faq-item {
+      p {
+        padding: 0;
+        margin: 0;
+      }
+      .title p {
+        font-size: 30px;
+      }
+      .content p {
+        font-size: 24px;
+      }
+    }
+    // Padding
+    .faq-item .title,
+    .content {
+      padding: 7px 28px;
+    }
+    .faq-wrapper {
+      margin-top: 25px;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+      gap: 15px 15px;
+      grid-auto-rows: min-content;
+    }
+    // Main
+    .faq-item {
+      transform: none;
+      height: fit-content;
+      cursor: pointer;
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #2f2f2f;
+        span {
+          padding-left: 25px;
+        }
+      }
+      .content {
+        background-color: #1f1f1f;
+        margin: 0;
+      }
+    }
+  }
+  /*
   #s4 {
     .contact-wrapper {
       display: flex;
@@ -230,142 +230,142 @@
   }
 }
 */
-    #s4 {
-        .content p {
-            font-size: 48px;
-            // margin-top: -2em;
-        }
-        .contact-wrapper {
-            display: flex;
-            .contact-form {
-                .grid-container {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: 1fr 1fr;
-                    gap: 0px 0px;
-                    grid-template-areas: 'name email . .' 'message message . .' 'button button . .' '. . . .';
-                }
-                .name {
-                    grid-area: name;
-                }
-                .email {
-                    grid-area: email;
-                }
-                .message {
-                    grid-area: message;
-                }
-                .button {
-                    grid-area: button;
-                }
-                .input,
-                label {
-                    display: block;
-                }
-                input,
-                select,
-                textarea {
-                    color: white;
-                }
-                textarea {
-                    width: 610px;
-                    height: 175px;
-                    padding: 0;
-                    float: left;
-                    border: 10px solid #2f2f2f;
-                    box-sizing: border-box;
-                    background-color: #2f2f2f;
-                    font-family: 'Bebas Neue', cursive;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 16px;
-                    text-align: left;
-                    margin-top: -4em;
-                }
-                input[type='name'] {
-                    width: 300px;
-                    padding: 0;
-                    float: left;
-                    border: 10px solid #2f2f2f;
-                    box-sizing: border-box;
-                    background-color: #2f2f2f;
-                    font-family: 'Bebas Neue', cursive;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 16px;
-                    text-align: left;
-                }
-                input[type='email'] {
-                    width: 300px;
-                    padding: 0;
-                    float: left;
-                    border: 10px solid #2f2f2f;
-                    box-sizing: border-box;
-                    background-color: #2f2f2f;
-                    font-family: 'Bebas Neue', cursive;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 16px;
-                    text-align: left;
-                    margin-left: 0.3em;
-                }
-                button {
-                    width: 610px;
-                    background-color: #ff0000;
-                    color: white;
-                    font-family: 'Bebas Neue', cursive;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 24px;
-                    border-radius: 5px;
-                    border: none;
-                    margin-top: 0.3em;
-                    outline: none;
-                }
-                .button1:hover {
-                    cursor: pointer;
-                    color: rgba(255, 255, 255, 0.75);
-                }
-                #status {
-                    width: 90%;
-                    max-width: 500px;
-                    text-align: center;
-                    padding: 10px;
-                    margin: 0 auto;
-                    border-radius: 8px;
-                    position: absolute;
-                    margin-top: 17em;
-                    margin-left: 3em;
-                }
-                #status.success {
-                    background-color: rgb(211, 250, 153);
-                    animation: status 4s ease forwards;
-                }
-                .status.error {
-                    background-color: rgb(250, 129, 92);
-                    color: white;
-                    animation: status 4s ease forwards;
-                }
-                @keyframes status {
-                    0% {
-                        opacity: 1;
-                        pointer-events: all;
-                    }
-                    90% {
-                        opacity: 1;
-                        pointer-events: all;
-                    }
-                    100% {
-                        opacity: 0;
-                        pointer-events: none;
-                    }
-                }
-            }
-        }
-        .contact-info {
-            font-size: 28px;
-            display: inline-block;
-            margin: 25px 10px;
-            margin-left: 6em;
-        }
+  #s4 {
+    .content p {
+      font-size: 48px;
+      // margin-top: -2em;
     }
+    .contact-wrapper {
+      display: flex;
+      .contact-form {
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          gap: 0px 0px;
+          grid-template-areas: 'name email . .' 'message message . .' 'button button . .' '. . . .';
+        }
+        .name {
+          grid-area: name;
+        }
+        .email {
+          grid-area: email;
+        }
+        .message {
+          grid-area: message;
+        }
+        .button {
+          grid-area: button;
+        }
+        .input,
+        label {
+          display: block;
+        }
+        input,
+        select,
+        textarea {
+          color: white;
+        }
+        textarea {
+          width: 610px;
+          height: 175px;
+          padding: 0;
+          float: left;
+          border: 10px solid #2f2f2f;
+          box-sizing: border-box;
+          background-color: #2f2f2f;
+          font-family: 'Bebas Neue', cursive;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          text-align: left;
+          margin-top: -4em;
+        }
+        input[type='name'] {
+          width: 300px;
+          padding: 0;
+          float: left;
+          border: 10px solid #2f2f2f;
+          box-sizing: border-box;
+          background-color: #2f2f2f;
+          font-family: 'Bebas Neue', cursive;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          text-align: left;
+        }
+        input[type='email'] {
+          width: 300px;
+          padding: 0;
+          float: left;
+          border: 10px solid #2f2f2f;
+          box-sizing: border-box;
+          background-color: #2f2f2f;
+          font-family: 'Bebas Neue', cursive;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          text-align: left;
+          margin-left: 0.3em;
+        }
+        button {
+          width: 610px;
+          background-color: #ff0000;
+          color: white;
+          font-family: 'Bebas Neue', cursive;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          border-radius: 5px;
+          border: none;
+          margin-top: 0.3em;
+          outline: none;
+        }
+        .button1:hover {
+          cursor: pointer;
+          color: rgba(255, 255, 255, 0.75);
+        }
+        #status {
+          width: 90%;
+          max-width: 500px;
+          text-align: center;
+          padding: 10px;
+          margin: 0 auto;
+          border-radius: 8px;
+          position: absolute;
+          margin-top: 17em;
+          margin-left: 3em;
+        }
+        #status.success {
+          background-color: rgb(211, 250, 153);
+          animation: status 4s ease forwards;
+        }
+        .status.error {
+          background-color: rgb(250, 129, 92);
+          color: white;
+          animation: status 4s ease forwards;
+        }
+        @keyframes status {
+          0% {
+            opacity: 1;
+            pointer-events: all;
+          }
+          90% {
+            opacity: 1;
+            pointer-events: all;
+          }
+          100% {
+            opacity: 0;
+            pointer-events: none;
+          }
+        }
+      }
+    }
+    .contact-info {
+      font-size: 28px;
+      display: inline-block;
+      margin: 25px 10px;
+      margin-left: 6em;
+    }
+  }
 }
