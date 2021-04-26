@@ -573,7 +573,6 @@ body {
   gap: 15px 15px;
   grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
-  border: 1px solid red;
 }
 
 .phase-1 #s3 .item {
