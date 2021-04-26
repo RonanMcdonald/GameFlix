@@ -42,7 +42,7 @@ app.use(function (req, res, next) {
 const routes = require('./routes/route.js')
 app.use('/', routes)
 
-const PORT = 8090
+let PORT = process.env.PORT || 8080
 app.listen(PORT, function () {
   //console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
 })
