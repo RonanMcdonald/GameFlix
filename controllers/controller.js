@@ -42,5 +42,5 @@ async function api_request(url) {
 // main()
 async function main() {
   console.log('Calling API. May take up to 30 seconds')
-  return await api_request('https://steam-store-api.herokuapp.com/')
+  return await api_request('https://gameflix-steam-store-api.herokuapp.com/')
 }
